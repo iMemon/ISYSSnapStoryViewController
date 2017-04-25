@@ -17,7 +17,7 @@ ISYSSnapStoryViewController is available through [CocoaPods](http://cocoapods.or
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "ISYSSnapStoryViewController"
+pod 'ISYSSnapStoryViewController', :git => 'https://github.com/iMemon/ISYSSnapStoryViewController'
 ```
 
 ## Author
