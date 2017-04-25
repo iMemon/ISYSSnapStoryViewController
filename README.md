@@ -22,7 +22,7 @@ pod 'ISYSSnapStoryViewController', :git => 'https://github.com/iMemon/ISYSSnapSt
 
 ## Author
 
-iMemon, ayazahmed313@gmail.com
+[Twitter](https://twitter.com/ayazahmed313), ayazahmed313@gmail.com
 
 ## License
 
