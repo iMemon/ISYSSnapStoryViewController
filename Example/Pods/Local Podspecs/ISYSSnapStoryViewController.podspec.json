@@ -1,8 +1,8 @@
 {
   "name": "ISYSSnapStoryViewController",
   "version": "0.1.0",
-  "summary": "A short description of ISYSSnapStoryViewController.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "A subclass on UILabel that provides a blink.",
+  "description": "This CocoaPod provides the ability to use a UILabel that may be started and stopped blinking.",
   "homepage": "https://github.com/iMemon/ISYSSnapStoryViewController",
   "license": {
     "type": "MIT",
@@ -18,5 +18,13 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "ISYSSnapStoryViewController/Classes/**/*"
+  "source_files": "ISYSSnapStoryViewController/Classes/**/*",
+  "dependencies": {
+    "VIMediaCache": [
+      "~> 0.1"
+    ],
+    "SpinKit": [
+      "~> 1.2"
+    ]
+  }
 }

@@ -1,5 +1,9 @@
 PODS:
-  - ISYSSnapStoryViewController (0.1.0)
+  - ISYSSnapStoryViewController (0.1.0):
+    - SpinKit (~> 1.2)
+    - VIMediaCache (~> 0.1)
+  - SpinKit (1.2.0)
+  - VIMediaCache (0.3)
 
 DEPENDENCIES:
   - ISYSSnapStoryViewController (from `../`)
@@ -9,8 +13,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ISYSSnapStoryViewController: 30903e183a5d1037b319d85c40d58265b1931269
+  ISYSSnapStoryViewController: 0f731eeb5980c029320c31f8658c93a79f424c3e
+  SpinKit: 65906a8b534a4e14cbfd3f8b0b6c329131faef4a
+  VIMediaCache: 02c03af2adf2526eddc8ee3b06e41f26e9546f38
 
-PODFILE CHECKSUM: e98bfda4289bb7129a4d5372a029e2d0e3bc5aa8
+PODFILE CHECKSUM: 4830a2f82d14a4732649ebcde50ec2bbc46a0de9
 
 COCOAPODS: 1.2.1

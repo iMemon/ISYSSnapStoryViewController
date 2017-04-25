@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "ISYSSnapStoryViewController.h"
 
 FOUNDATION_EXPORT double ISYSSnapStoryViewControllerVersionNumber;
 FOUNDATION_EXPORT const unsigned char ISYSSnapStoryViewControllerVersionString[];
