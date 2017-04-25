@@ -1,0 +1,22 @@
+{
+  "name": "ISYSSnapStoryViewController",
+  "version": "0.1.0",
+  "summary": "A short description of ISYSSnapStoryViewController.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/iMemon/ISYSSnapStoryViewController",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "iMemon": "ayazahmed313@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/iMemon/ISYSSnapStoryViewController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ISYSSnapStoryViewController/Classes/**/*"
+}

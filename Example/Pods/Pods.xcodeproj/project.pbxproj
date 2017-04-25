@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09DA9432A2394F8321311E201105C091 /* Pods-ISYSSnapStoryViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 646D8C98C50999B18E82EB51D1997A61 /* Pods-ISYSSnapStoryViewController_Example-dummy.m */; };
+		2419C5CF46A1ADE3BD26BA069486F69E /* Pods-ISYSSnapStoryViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E13331681C05A099B011507BE1D0EC /* Pods-ISYSSnapStoryViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29A7DF08F3B01D37F3B6C8D971D6EFDB /* ISYSSnapStoryViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27EB4E590C28894779D395CD783815D2 /* ISYSSnapStoryViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5653A4965BD65BA9F1755FA235092BFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5B9532D22CFF50E2A7BEABC0E9683FFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9C73EA2DD48487865774047F7EAB6537 /* Pods-ISYSSnapStoryViewController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D325B36554C94F5AD1973B8055DF7 /* Pods-ISYSSnapStoryViewController_Tests-dummy.m */; };
+		A3DD1531477ADCF2386A3FA5A5293EB2 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AD7F8418D77DD585798191F05E2A4 /* ReplaceMe.m */; };
+		C78FE3E34C09D903323535855788611C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		F84AF79324DE270CF427A9F8DD07B7D1 /* ISYSSnapStoryViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9C9CBB471B07D9F2B545CA548E635B /* ISYSSnapStoryViewController-dummy.m */; };
+		FB7277201B416963BF57E722967CD710 /* Pods-ISYSSnapStoryViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0254C365C435E33442A749E5CA3DD22D /* Pods-ISYSSnapStoryViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BE89629AF2A234ECF00241C95AF938D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98A34A1D5A7AFE2F6AE73653D78A859E;
+			remoteInfo = ISYSSnapStoryViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0254C365C435E33442A749E5CA3DD22D /* Pods-ISYSSnapStoryViewController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ISYSSnapStoryViewController_Tests-umbrella.h"; sourceTree = "<group>"; };
+		070AD7F8418D77DD585798191F05E2A4 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
+		27EB4E590C28894779D395CD783815D2 /* ISYSSnapStoryViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ISYSSnapStoryViewController-umbrella.h"; sourceTree = "<group>"; };
+		28E7432D143D1DED627780AD5D68145E /* ISYSSnapStoryViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ISYSSnapStoryViewController.xcconfig; sourceTree = "<group>"; };
+		2FE4E71C543FEAC894989799FEE3FA12 /* ISYSSnapStoryViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ISYSSnapStoryViewController-prefix.pch"; sourceTree = "<group>"; };
+		3C44549B264CF64D013C80B3113A2D57 /* Pods_ISYSSnapStoryViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ISYSSnapStoryViewController_Tests.framework; path = "Pods-ISYSSnapStoryViewController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E5D325B36554C94F5AD1973B8055DF7 /* Pods-ISYSSnapStoryViewController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ISYSSnapStoryViewController_Tests-dummy.m"; sourceTree = "<group>"; };
+		61B3D8E89AB59EDC292B180BEFD08506 /* Pods-ISYSSnapStoryViewController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ISYSSnapStoryViewController_Tests.modulemap"; sourceTree = "<group>"; };
+		646D8C98C50999B18E82EB51D1997A61 /* Pods-ISYSSnapStoryViewController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ISYSSnapStoryViewController_Example-dummy.m"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		69185EF92FA96ECE6D764FEB3715A90F /* Pods_ISYSSnapStoryViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ISYSSnapStoryViewController_Example.framework; path = "Pods-ISYSSnapStoryViewController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E08DEE6318969D6A7B087C74F3122F2 /* Pods-ISYSSnapStoryViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ISYSSnapStoryViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		75E13331681C05A099B011507BE1D0EC /* Pods-ISYSSnapStoryViewController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ISYSSnapStoryViewController_Example-umbrella.h"; sourceTree = "<group>"; };
+		83255BBA950525A9451CAA249E62009E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9245EB79E2F32C3501F3AC8BFC01E735 /* Pods-ISYSSnapStoryViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ISYSSnapStoryViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94BBCC01B2E614C3387039D02AE299ED /* Pods-ISYSSnapStoryViewController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ISYSSnapStoryViewController_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		B194F97C29A48DC927854F1BC84B4C8B /* Pods-ISYSSnapStoryViewController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ISYSSnapStoryViewController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B2E006F467F8310E86843B776A132DB1 /* ISYSSnapStoryViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ISYSSnapStoryViewController.modulemap; sourceTree = "<group>"; };
+		B4F306ACCCF93B39B1A987026B8707B7 /* Pods-ISYSSnapStoryViewController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ISYSSnapStoryViewController_Tests-resources.sh"; sourceTree = "<group>"; };
+		BB205EFFF9B092330618256658A85BAA /* ISYSSnapStoryViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ISYSSnapStoryViewController.framework; path = ISYSSnapStoryViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C628D1878F2C7D133C46C5C9AAFD7267 /* Pods-ISYSSnapStoryViewController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ISYSSnapStoryViewController_Example.modulemap"; sourceTree = "<group>"; };
+		C8AD9FDB643B87A85BED24ACCF32B749 /* Pods-ISYSSnapStoryViewController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ISYSSnapStoryViewController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CA9C9CBB471B07D9F2B545CA548E635B /* ISYSSnapStoryViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ISYSSnapStoryViewController-dummy.m"; sourceTree = "<group>"; };
+		CB4A9FF9E203239E6A0AC9E4E2C8D58E /* Pods-ISYSSnapStoryViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ISYSSnapStoryViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D37B7DDAF8058F5E9C069699482584D7 /* Pods-ISYSSnapStoryViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ISYSSnapStoryViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D600FB28829EBCB1A28CEFE4FADAD64F /* Pods-ISYSSnapStoryViewController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ISYSSnapStoryViewController_Example-frameworks.sh"; sourceTree = "<group>"; };
+		DA96BD7D3E6DF5339299D78A7B6A1752 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E14B28C1212FDEFD5AD0554FF65102AB /* Pods-ISYSSnapStoryViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ISYSSnapStoryViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E6EB06F45D9EB988B0E69E7552047FE8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFF7C1C0630DD0974B8860DF3157F1F2 /* Pods-ISYSSnapStoryViewController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ISYSSnapStoryViewController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		F273186319BD97EF219BC28405B62846 /* Pods-ISYSSnapStoryViewController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ISYSSnapStoryViewController_Example-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA4F707107A3F94107612BD84BB82FE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9532D22CFF50E2A7BEABC0E9683FFA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B2D8879EC763A5447CDA409272E7F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5653A4965BD65BA9F1755FA235092BFB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F36E003DF3283889F2E20AD447148316 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78FE3E34C09D903323535855788611C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B0B187ACC08BE2129D0B97EE82BFBAB /* ISYSSnapStoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D4C4EA326FA965C63A5E810E48AE4E5A /* ISYSSnapStoryViewController */,
+				5A35EA85918644C6FFA14D344DAD5C89 /* Support Files */,
+			);
+			name = ISYSSnapStoryViewController;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		5A35EA85918644C6FFA14D344DAD5C89 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				83255BBA950525A9451CAA249E62009E /* Info.plist */,
+				B2E006F467F8310E86843B776A132DB1 /* ISYSSnapStoryViewController.modulemap */,
+				28E7432D143D1DED627780AD5D68145E /* ISYSSnapStoryViewController.xcconfig */,
+				CA9C9CBB471B07D9F2B545CA548E635B /* ISYSSnapStoryViewController-dummy.m */,
+				2FE4E71C543FEAC894989799FEE3FA12 /* ISYSSnapStoryViewController-prefix.pch */,
+				27EB4E590C28894779D395CD783815D2 /* ISYSSnapStoryViewController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ISYSSnapStoryViewController";
+			sourceTree = "<group>";
+		};
+		5C9F081B5F501116A5135BE43608480C /* Pods-ISYSSnapStoryViewController_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E6EB06F45D9EB988B0E69E7552047FE8 /* Info.plist */,
+				61B3D8E89AB59EDC292B180BEFD08506 /* Pods-ISYSSnapStoryViewController_Tests.modulemap */,
+				E14B28C1212FDEFD5AD0554FF65102AB /* Pods-ISYSSnapStoryViewController_Tests-acknowledgements.markdown */,
+				B194F97C29A48DC927854F1BC84B4C8B /* Pods-ISYSSnapStoryViewController_Tests-acknowledgements.plist */,
+				3E5D325B36554C94F5AD1973B8055DF7 /* Pods-ISYSSnapStoryViewController_Tests-dummy.m */,
+				94BBCC01B2E614C3387039D02AE299ED /* Pods-ISYSSnapStoryViewController_Tests-frameworks.sh */,
+				B4F306ACCCF93B39B1A987026B8707B7 /* Pods-ISYSSnapStoryViewController_Tests-resources.sh */,
+				0254C365C435E33442A749E5CA3DD22D /* Pods-ISYSSnapStoryViewController_Tests-umbrella.h */,
+				D37B7DDAF8058F5E9C069699482584D7 /* Pods-ISYSSnapStoryViewController_Tests.debug.xcconfig */,
+				9245EB79E2F32C3501F3AC8BFC01E735 /* Pods-ISYSSnapStoryViewController_Tests.release.xcconfig */,
+			);
+			name = "Pods-ISYSSnapStoryViewController_Tests";
+			path = "Target Support Files/Pods-ISYSSnapStoryViewController_Tests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				D2FC096974B3D93B675A2DA3E8A0B552 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				FF4F07EEEF4E6642705207FC1C8B22D7 /* Products */,
+				811C9A7929FA731196CEE67AF7F50234 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		811C9A7929FA731196CEE67AF7F50234 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC28DE1E4FE2ECA9E590B600E23BF5 /* Pods-ISYSSnapStoryViewController_Example */,
+				5C9F081B5F501116A5135BE43608480C /* Pods-ISYSSnapStoryViewController_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B3393768E7FE59CE197A0D66C62B07C9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				070AD7F8418D77DD585798191F05E2A4 /* ReplaceMe.m */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9BC28DE1E4FE2ECA9E590B600E23BF5 /* Pods-ISYSSnapStoryViewController_Example */ = {
+			isa = PBXGroup;
+			children = (
+				DA96BD7D3E6DF5339299D78A7B6A1752 /* Info.plist */,
+				C628D1878F2C7D133C46C5C9AAFD7267 /* Pods-ISYSSnapStoryViewController_Example.modulemap */,
+				C8AD9FDB643B87A85BED24ACCF32B749 /* Pods-ISYSSnapStoryViewController_Example-acknowledgements.markdown */,
+				EFF7C1C0630DD0974B8860DF3157F1F2 /* Pods-ISYSSnapStoryViewController_Example-acknowledgements.plist */,
+				646D8C98C50999B18E82EB51D1997A61 /* Pods-ISYSSnapStoryViewController_Example-dummy.m */,
+				D600FB28829EBCB1A28CEFE4FADAD64F /* Pods-ISYSSnapStoryViewController_Example-frameworks.sh */,
+				F273186319BD97EF219BC28405B62846 /* Pods-ISYSSnapStoryViewController_Example-resources.sh */,
+				75E13331681C05A099B011507BE1D0EC /* Pods-ISYSSnapStoryViewController_Example-umbrella.h */,
+				CB4A9FF9E203239E6A0AC9E4E2C8D58E /* Pods-ISYSSnapStoryViewController_Example.debug.xcconfig */,
+				6E08DEE6318969D6A7B087C74F3122F2 /* Pods-ISYSSnapStoryViewController_Example.release.xcconfig */,
+			);
+			name = "Pods-ISYSSnapStoryViewController_Example";
+			path = "Target Support Files/Pods-ISYSSnapStoryViewController_Example";
+			sourceTree = "<group>";
+		};
+		D2FC096974B3D93B675A2DA3E8A0B552 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B0B187ACC08BE2129D0B97EE82BFBAB /* ISYSSnapStoryViewController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D4C4EA326FA965C63A5E810E48AE4E5A /* ISYSSnapStoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B3393768E7FE59CE197A0D66C62B07C9 /* Classes */,
+			);
+			name = ISYSSnapStoryViewController;
+			path = ISYSSnapStoryViewController;
+			sourceTree = "<group>";
+		};
+		FF4F07EEEF4E6642705207FC1C8B22D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB205EFFF9B092330618256658A85BAA /* ISYSSnapStoryViewController.framework */,
+				69185EF92FA96ECE6D764FEB3715A90F /* Pods_ISYSSnapStoryViewController_Example.framework */,
+				3C44549B264CF64D013C80B3113A2D57 /* Pods_ISYSSnapStoryViewController_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		13E9DDB90E575BFC7F2114CFE712B437 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2419C5CF46A1ADE3BD26BA069486F69E /* Pods-ISYSSnapStoryViewController_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		561F24A5B5491786178695015945DBAD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29A7DF08F3B01D37F3B6C8D971D6EFDB /* ISYSSnapStoryViewController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6FB917251887E7E1F9313747528EF6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB7277201B416963BF57E722967CD710 /* Pods-ISYSSnapStoryViewController_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DB6CDB591C912E09CBADB705F40D526 /* Pods-ISYSSnapStoryViewController_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39DF4B4B09A9DAA1B688FEC68D97792B /* Build configuration list for PBXNativeTarget "Pods-ISYSSnapStoryViewController_Example" */;
+			buildPhases = (
+				00A380D9C7299498269FB3A42EA484B9 /* Sources */,
+				C6B2D8879EC763A5447CDA409272E7F9 /* Frameworks */,
+				13E9DDB90E575BFC7F2114CFE712B437 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BDB1F4B01211843E3D6DFC65A454573 /* PBXTargetDependency */,
+			);
+			name = "Pods-ISYSSnapStoryViewController_Example";
+			productName = "Pods-ISYSSnapStoryViewController_Example";
+			productReference = 69185EF92FA96ECE6D764FEB3715A90F /* Pods_ISYSSnapStoryViewController_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		98A34A1D5A7AFE2F6AE73653D78A859E /* ISYSSnapStoryViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6CD5DA2D90E4C886F00BC2ED8A550F6 /* Build configuration list for PBXNativeTarget "ISYSSnapStoryViewController" */;
+			buildPhases = (
+				DD78A7A1D5328E4AB682CD531F037698 /* Sources */,
+				AA4F707107A3F94107612BD84BB82FE3 /* Frameworks */,
+				561F24A5B5491786178695015945DBAD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ISYSSnapStoryViewController;
+			productName = ISYSSnapStoryViewController;
+			productReference = BB205EFFF9B092330618256658A85BAA /* ISYSSnapStoryViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A8B6E6FB81CD4D497FC005CE6736B05D /* Pods-ISYSSnapStoryViewController_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80060BE9516CB80E323F9FDE9D6DE81F /* Build configuration list for PBXNativeTarget "Pods-ISYSSnapStoryViewController_Tests" */;
+			buildPhases = (
+				930EEE20083F962F25FD35893F7E445E /* Sources */,
+				F36E003DF3283889F2E20AD447148316 /* Frameworks */,
+				FB6FB917251887E7E1F9313747528EF6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ISYSSnapStoryViewController_Tests";
+			productName = "Pods-ISYSSnapStoryViewController_Tests";
+			productReference = 3C44549B264CF64D013C80B3113A2D57 /* Pods_ISYSSnapStoryViewController_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FF4F07EEEF4E6642705207FC1C8B22D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98A34A1D5A7AFE2F6AE73653D78A859E /* ISYSSnapStoryViewController */,
+				8DB6CDB591C912E09CBADB705F40D526 /* Pods-ISYSSnapStoryViewController_Example */,
+				A8B6E6FB81CD4D497FC005CE6736B05D /* Pods-ISYSSnapStoryViewController_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00A380D9C7299498269FB3A42EA484B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09DA9432A2394F8321311E201105C091 /* Pods-ISYSSnapStoryViewController_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		930EEE20083F962F25FD35893F7E445E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C73EA2DD48487865774047F7EAB6537 /* Pods-ISYSSnapStoryViewController_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD78A7A1D5328E4AB682CD531F037698 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84AF79324DE270CF427A9F8DD07B7D1 /* ISYSSnapStoryViewController-dummy.m in Sources */,
+				A3DD1531477ADCF2386A3FA5A5293EB2 /* ReplaceMe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BDB1F4B01211843E3D6DFC65A454573 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ISYSSnapStoryViewController;
+			target = 98A34A1D5A7AFE2F6AE73653D78A859E /* ISYSSnapStoryViewController */;
+			targetProxy = 6BE89629AF2A234ECF00241C95AF938D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01A46AD215B895B83B61B1726ACE2820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28E7432D143D1DED627780AD5D68145E /* ISYSSnapStoryViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ISYSSnapStoryViewController/ISYSSnapStoryViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ISYSSnapStoryViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ISYSSnapStoryViewController/ISYSSnapStoryViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ISYSSnapStoryViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		24F2FB1A943049E7712A994C6E519720 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28E7432D143D1DED627780AD5D68145E /* ISYSSnapStoryViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ISYSSnapStoryViewController/ISYSSnapStoryViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ISYSSnapStoryViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ISYSSnapStoryViewController/ISYSSnapStoryViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ISYSSnapStoryViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		68A108368EFD292E09B775407D7A4ADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E08DEE6318969D6A7B087C74F3122F2 /* Pods-ISYSSnapStoryViewController_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ISYSSnapStoryViewController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ISYSSnapStoryViewController_Example/Pods-ISYSSnapStoryViewController_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ISYSSnapStoryViewController_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6FBBDE196E4B0CA8AE03A219FE7C8A2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB4A9FF9E203239E6A0AC9E4E2C8D58E /* Pods-ISYSSnapStoryViewController_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ISYSSnapStoryViewController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ISYSSnapStoryViewController_Example/Pods-ISYSSnapStoryViewController_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ISYSSnapStoryViewController_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		764E409E395170F263DC683168FBE71D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D37B7DDAF8058F5E9C069699482584D7 /* Pods-ISYSSnapStoryViewController_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ISYSSnapStoryViewController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ISYSSnapStoryViewController_Tests/Pods-ISYSSnapStoryViewController_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ISYSSnapStoryViewController_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9B1F800C18CD584C9B838A61A88CFB11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9245EB79E2F32C3501F3AC8BFC01E735 /* Pods-ISYSSnapStoryViewController_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ISYSSnapStoryViewController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ISYSSnapStoryViewController_Tests/Pods-ISYSSnapStoryViewController_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ISYSSnapStoryViewController_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39DF4B4B09A9DAA1B688FEC68D97792B /* Build configuration list for PBXNativeTarget "Pods-ISYSSnapStoryViewController_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FBBDE196E4B0CA8AE03A219FE7C8A2E /* Debug */,
+				68A108368EFD292E09B775407D7A4ADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80060BE9516CB80E323F9FDE9D6DE81F /* Build configuration list for PBXNativeTarget "Pods-ISYSSnapStoryViewController_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				764E409E395170F263DC683168FBE71D /* Debug */,
+				9B1F800C18CD584C9B838A61A88CFB11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6CD5DA2D90E4C886F00BC2ED8A550F6 /* Build configuration list for PBXNativeTarget "ISYSSnapStoryViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24F2FB1A943049E7712A994C6E519720 /* Debug */,
+				01A46AD215B895B83B61B1726ACE2820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

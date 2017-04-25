@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ISYSSnapStoryViewController_Example' do
+  pod 'ISYSSnapStoryViewController', :path => '../'
+
+  target 'ISYSSnapStoryViewController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

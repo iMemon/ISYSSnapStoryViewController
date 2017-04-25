@@ -1,0 +1,6 @@
+framework module ISYSSnapStoryViewController {
+  umbrella header "ISYSSnapStoryViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

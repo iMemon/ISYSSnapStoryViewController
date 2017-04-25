@@ -1,0 +1,16 @@
+PODS:
+  - ISYSSnapStoryViewController (0.1.0)
+
+DEPENDENCIES:
+  - ISYSSnapStoryViewController (from `../`)
+
+EXTERNAL SOURCES:
+  ISYSSnapStoryViewController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ISYSSnapStoryViewController: 30903e183a5d1037b319d85c40d58265b1931269
+
+PODFILE CHECKSUM: e98bfda4289bb7129a4d5372a029e2d0e3bc5aa8
+
+COCOAPODS: 1.2.1
