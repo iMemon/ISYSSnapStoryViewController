@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ISYSSnapStoryViewController: 0f731eeb5980c029320c31f8658c93a79f424c3e
+  ISYSSnapStoryViewController: 341badac10320e4ec824b18d900a909f86a85e51
   SpinKit: 65906a8b534a4e14cbfd3f8b0b6c329131faef4a
   VIMediaCache: 02c03af2adf2526eddc8ee3b06e41f26e9546f38
 

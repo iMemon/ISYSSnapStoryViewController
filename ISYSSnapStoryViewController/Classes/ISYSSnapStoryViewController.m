@@ -22,6 +22,9 @@
 @property (nonatomic, strong) VIResourceLoaderManager* resourceLoaderManager;
 
 @property (nonatomic, strong) AVPlayer* player;
+@property (nonatomic, strong) AVPlayer* nextPlayer;
+@property (nonatomic, strong) AVPlayer* prevPlayer;
+
 @property (nonatomic, strong) SnapTimerView * timerView;
 @property (nonatomic, weak) RTSpinKitView *spinner;
 @property (nonatomic, assign) BOOL isLoading;
@@ -33,6 +36,8 @@
 @property (nonatomic, assign) NSInteger currentItemIndex;
 
 @property (nonatomic, strong) AVPlayerLayer* playerLayer;
+@property (nonatomic, strong) AVPlayerLayer* nextPlayerLayer;
+@property (nonatomic, strong) AVPlayerLayer* prevPlayerLayer;
 
 @end
 
@@ -75,17 +80,19 @@
     return _resourceLoaderManager;
 }
 - (AVPlayerItem *)currentItem {
-    // If currentItemIndex object is present in playerItems
-    if (self.currentItemIndex < self.playerItems.count) {
-        return self.playerItems[self.currentItemIndex];
-    }
-    return nil;
+    return [self playerItemAtIndex:self.currentItemIndex];;
 }
 -(float)currentProgress {
     double currentTime = CMTimeGetSeconds(self.currentItem.currentTime);
     double total = CMTimeGetSeconds(self.currentItem.duration);
     double progress = currentTime/total;
     return progress;
+}
+-(AVPlayerItem *)playerItemAtIndex:(NSUInteger)index {
+    if (index>=0 && index<_playerItems.count) {
+        return _playerItems[index];
+    }
+    return nil;
 }
 //-(float) currentBuffer {
 //    NSValue* firstBufferedRange = self.currentItem.loadedTimeRanges.firstObject;
@@ -215,7 +222,7 @@
     __weak typeof(self) weakSelf = self;
     if (self.playerItems.count > 0) {
         // Create player
-        self.player = [AVPlayer playerWithPlayerItem:self.playerItems[self.currentItemIndex]];
+        self.player = [AVPlayer playerWithPlayerItem:[self playerItemAtIndex:self.currentItemIndex]];
         self.playerLayer.player = self.player;
         [self.player setVolume:1.0f];
         
@@ -246,7 +253,7 @@
 #pragma mark - Private Fuctions - Play
 - (void)playCurrentVideo {
     if (self.playerItems.count > 0) {
-        AVPlayerItem * currentItem = self.playerItems[self.currentItemIndex];
+        AVPlayerItem * currentItem = [self playerItemAtIndex:self.currentItemIndex];
         
         if (currentItem.status != AVPlayerStatusReadyToPlay) {
             self.isLoading = true;

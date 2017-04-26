@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ISYSSnapStoryViewController'
   s.version          = '0.1.0'
-  s.summary = 'A subclass on UILabel that provides a blink.'
+  s.summary = 'Snapchat inspired story video player with back, forth, loop and video caching'
   s.description= 'This CocoaPod provides the ability to use a UILabel that may be started and stopped blinking.'
 
 # This description is used to generate tags and improve search results.
@@ -37,5 +37,4 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'VIMediaCache', '~> 0.1'
   s.dependency 'SpinKit', '~> 1.2'
-  # s.dependency 'SnapTimer'
 end
