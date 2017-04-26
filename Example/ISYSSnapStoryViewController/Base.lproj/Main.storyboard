@@ -25,7 +25,7 @@
                                 <rect key="frame" x="90" y="318" width="194" height="30"/>
                                 <state key="normal" title="Present StoryViewController"/>
                                 <connections>
-                                    <action selector="onPresent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wS6-zW-Dia"/>
+                                    <action selector="onPresent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eSP-8s-m46"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ISYSSnapStoryViewController'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary = 'A subclass on UILabel that provides a blink.'
   s.description= 'This CocoaPod provides the ability to use a UILabel that may be started and stopped blinking.'
 
@@ -34,8 +34,7 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'VIMediaCache', '~> 0.1'
-  s.dependency 'SpinKit', '~> 1.2'
+  s.frameworks = 'UIKit', 'Foundation'
+  s.dependency "SpinKit", "~> 1.2"
   # s.dependency 'SnapTimer'
 end

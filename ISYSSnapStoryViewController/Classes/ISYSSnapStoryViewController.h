@@ -14,6 +14,6 @@
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil NS_UNAVAILABLE;
-- (instancetype)initWithVideoUrls:(NSArray<NSURL *> *)videoUrls;
+- (instancetype)initWithVideoUrls:(NSArray *)videoUrls;
 
 @end
