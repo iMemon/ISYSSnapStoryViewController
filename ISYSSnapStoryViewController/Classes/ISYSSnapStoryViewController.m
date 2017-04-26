@@ -9,7 +9,6 @@
 @import AVFoundation;
 #import "ISYSSnapStoryViewController.h"
 
-#import "VIResourceLoaderManager.h"
 #import <SpinKit/RTSpinKitView.h>
 #import <ISYSSnapStoryViewController/ISYSSnapStoryViewController-Swift.h>
 
@@ -19,7 +18,6 @@
 @property (nonatomic, strong) NSArray* videoUrls;
 
 @property (nonatomic, strong) UITapGestureRecognizer* tapGesture;
-@property (nonatomic, strong) VIResourceLoaderManager* resourceLoaderManager;
 
 @property (nonatomic, strong) AVPlayer* player;
 @property (nonatomic, strong) AVPlayer* nextPlayer;
@@ -30,7 +28,7 @@
 @property (nonatomic, assign) BOOL isLoading;
 
 /// Array of AVPlayerItem
-@property (nonatomic, strong) NSMutableArray<AVPlayerItem *> * playerItems;
+@property (nonatomic, strong) NSMutableArray * playerItems;
 
 /// Currently playing AVPlayerItem
 @property (nonatomic, assign) NSInteger currentItemIndex;
@@ -73,11 +71,11 @@
     }
     return _tapGesture;
 }
-- (VIResourceLoaderManager *)resourceLoaderManager {
-    if (!_resourceLoaderManager) {
-        _resourceLoaderManager = [VIResourceLoaderManager new];
+- (NSMutableArray *)playerItems {
+    if (!_playerItems) {
+        _playerItems = [NSMutableArray array];
     }
-    return _resourceLoaderManager;
+    return _playerItems;
 }
 - (AVPlayerItem *)currentItem {
     return [self playerItemAtIndex:self.currentItemIndex];;
@@ -133,7 +131,6 @@
 - (instancetype)initWithVideoUrls:(NSArray *)videoUrls {
     self = [super init];
     if (self) {
-        self.playerItems = [NSMutableArray array];
         self.videoUrls = videoUrls;
     }
     return self;
@@ -153,11 +150,9 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [UIApplication sharedApplication].statusBarHidden = YES;
 }
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [UIApplication sharedApplication].statusBarHidden = NO;
 }
 - (BOOL)prefersStatusBarHidden {
     return YES;
@@ -171,7 +166,6 @@
     
     [self.playerLayer removeFromSuperlayer];
     
-    self.resourceLoaderManager = nil;
     self.player = nil;
     [self.playerItems removeAllObjects];
     self.playerItems = nil;
@@ -194,7 +188,7 @@
 - (void)createPlayerItems {
     // Create playerItems
     for (NSURL * url in self.videoUrls) {
-        AVPlayerItem *item = [self.resourceLoaderManager playerItemWithURL:url];
+        AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
         [self.playerItems addObject:item];
     }
     
@@ -222,8 +216,9 @@
     __weak typeof(self) weakSelf = self;
     if (self.playerItems.count > 0) {
         // Create player
-        self.player = [AVPlayer playerWithPlayerItem:[self playerItemAtIndex:self.currentItemIndex]];
-        self.playerLayer.player = self.player;
+        self.player = [AVPlayer playerWithPlayerItem:self.playerItems[self.currentItemIndex]];
+//        AVPlayerItem * testItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/OTskm12IalYJ42tTU8LQudIzYeF3%2Fmessage_reaction_video_-Ki4CrJxC7JsHR1Cs_a7%2F1492588684179.mp4?alt=media&token=e282e01b-d099-41c4-a165-cbf78e108a7d"]];
+//        self.player = [AVPlayer playerWithPlayerItem:testItem];
         [self.player setVolume:1.0f];
         
         // Listen for PlayerItem Progress notification
@@ -243,6 +238,7 @@
         
         // Add playerLayer to view
         self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
+        self.playerLayer.player = self.player;
         [self.view.layer addSublayer:self.playerLayer];
         
         // Add TapGesture

@@ -1,7 +1,7 @@
 {
   "name": "ISYSSnapStoryViewController",
-  "version": "0.1.0",
-  "summary": "Snapchat inspired story video player with back, forth, loop and video caching",
+  "version": "0.1.1",
+  "summary": "A subclass on UILabel that provides a blink.",
   "description": "This CocoaPod provides the ability to use a UILabel that may be started and stopped blinking.",
   "homepage": "https://github.com/iMemon/ISYSSnapStoryViewController",
   "license": {
@@ -13,16 +13,17 @@
   },
   "source": {
     "git": "https://github.com/iMemon/ISYSSnapStoryViewController.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "ISYSSnapStoryViewController/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ],
   "dependencies": {
-    "VIMediaCache": [
-      "~> 0.1"
-    ],
     "SpinKit": [
       "~> 1.2"
     ]

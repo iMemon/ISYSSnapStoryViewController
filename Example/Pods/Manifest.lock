@@ -1,9 +1,7 @@
 PODS:
-  - ISYSSnapStoryViewController (0.1.0):
+  - ISYSSnapStoryViewController (0.1.1):
     - SpinKit (~> 1.2)
-    - VIMediaCache (~> 0.1)
   - SpinKit (1.2.0)
-  - VIMediaCache (0.3)
 
 DEPENDENCIES:
   - ISYSSnapStoryViewController (from `../`)
@@ -13,9 +11,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ISYSSnapStoryViewController: 341badac10320e4ec824b18d900a909f86a85e51
+  ISYSSnapStoryViewController: 603968ae0cb06bc66feb865a5a56315c32dee998
   SpinKit: 65906a8b534a4e14cbfd3f8b0b6c329131faef4a
-  VIMediaCache: 02c03af2adf2526eddc8ee3b06e41f26e9546f38
 
 PODFILE CHECKSUM: 4830a2f82d14a4732649ebcde50ec2bbc46a0de9
 
