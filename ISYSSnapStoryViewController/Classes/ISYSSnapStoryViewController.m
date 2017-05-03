@@ -8,20 +8,30 @@
 
 @import AVFoundation;
 #import "ISYSSnapStoryViewController.h"
-
+#import "VIMediaCache.h"
 #import <SpinKit/RTSpinKitView.h>
+#import <CommonCrypto/CommonDigest.h>
 #import <ISYSSnapStoryViewController/ISYSSnapStoryViewController-Swift.h>
+
+//static MZDownloadManager *sharedDownloadManager;
 
 @interface ISYSSnapStoryViewController ()
 
 /// Array of urls which will be played
 @property (nonatomic, strong) NSArray* videoUrls;
 
+@property (nonatomic, strong) VIResourceLoaderManager *resourceLoaderManager;
+
 @property (nonatomic, strong) UITapGestureRecognizer* tapGesture;
+
+@property (nonatomic, strong) id playerTimeObserver;
 
 @property (nonatomic, strong) AVPlayer* player;
 @property (nonatomic, strong) AVPlayer* nextPlayer;
 @property (nonatomic, strong) AVPlayer* prevPlayer;
+@property (nonatomic, strong) AVPlayerLayer* playerLayer;
+@property (nonatomic, strong) AVPlayerLayer* nextPlayerLayer;
+@property (nonatomic, strong) AVPlayerLayer* prevPlayerLayer;
 
 @property (nonatomic, strong) SnapTimerView * timerView;
 @property (nonatomic, weak) RTSpinKitView *spinner;
@@ -33,15 +43,27 @@
 /// Currently playing AVPlayerItem
 @property (nonatomic, assign) NSInteger currentItemIndex;
 
-@property (nonatomic, strong) AVPlayerLayer* playerLayer;
-@property (nonatomic, strong) AVPlayerLayer* nextPlayerLayer;
-@property (nonatomic, strong) AVPlayerLayer* prevPlayerLayer;
-
 @end
 
 @implementation ISYSSnapStoryViewController
 
 #pragma mark - Properties
+//+ (MZDownloadManager *)sharedDownloadManager {
+//    static dispatch_once_t DDASLLoggerOnceToken;
+//    dispatch_once(&DDASLLoggerOnceToken, ^{
+//        NSString * sessionId = @"com.iSystematic.ReactionApp.MZDownloadManager.BackgroundSession";
+//        sharedDownloadManager = [[MZDownloadManager alloc] initWithSession:sessionId delegate:self completion:^{
+//            NSLog(@"");
+//        }];
+//    });
+//    return sharedDownloadManager;
+//}
+- (VIResourceLoaderManager *)resourceLoaderManager {
+    if (!_resourceLoaderManager) {
+        _resourceLoaderManager = [VIResourceLoaderManager new];
+    }
+    return _resourceLoaderManager;
+}
 - (SnapTimerView *)timerView {
     if (!_timerView) {
         _timerView = [[SnapTimerView alloc] initWithFrame:CGRectMake(20.0, 20.0, 30.0, 30.0)];
@@ -61,6 +83,9 @@
 -(void)setIsLoading:(BOOL)isLoading{
     _isLoading = isLoading;
     [self.spinner setHidden:!isLoading];
+    if (isLoading) {
+        [self updateProgress:0.0 animated:NO];
+    }
 }
 - (UITapGestureRecognizer *)tapGesture {
     if (!_tapGesture) {
@@ -86,9 +111,11 @@
     double progress = currentTime/total;
     return progress;
 }
--(AVPlayerItem *)playerItemAtIndex:(NSUInteger)index {
-    if (index>=0 && index<_playerItems.count) {
+-(AVPlayerItem *)playerItemAtIndex:(NSInteger)index {
+    if (index>=0 && index<_videoUrls.count) {
         return _playerItems[index];
+    } else {
+        // TODO: Create playerItem
     }
     return nil;
 }
@@ -117,20 +144,22 @@
     }
 }
 - (void)updateProgress:(float)currentProgress animated:(BOOL)animated {
-    CGFloat innerVal = (((CGFloat)self.currentItemIndex/self.playerItems.count)*100.0);
+    CGFloat innerVal = (self.currentItemIndex==self.videoUrls.count-1) ? 100.0 : (((CGFloat)self.currentItemIndex/self.videoUrls.count)*100.0);
     CGFloat outerVal = (currentProgress*100.0);
-    //    if (animated) {
-    [self.timerView animateInnerValue:innerVal];
-    [self.timerView animateOuterValue:outerVal];
-    //    } else {
-    //
-    //    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.timerView animateInnerValue:innerVal];
+        [self.timerView animateOuterValue:outerVal];
+    });
 }
 
 #pragma mark - View Life Cycle
 - (instancetype)initWithVideoUrls:(NSArray *)videoUrls {
     self = [super init];
     if (self) {
+//        NSString * sessionId = @"com.iSystematic.ReactionApp.MZDownloadManager.BackgroundSession";
+//        sharedDownloadManager = [[MZDownloadManager alloc] initWithSession:sessionId delegate:self completion:^{
+//            NSLog(@"");
+//        }];
         self.videoUrls = videoUrls;
     }
     return self;
@@ -162,10 +191,14 @@
     // Dispose of any resources that can be recreated.
 }
 -(void) dealloc{
+    NSLog(@"dealloc -- %@",self);
+    
     [self releasePlayerItemKVOs:self.player.currentItem];
     
     [self.playerLayer removeFromSuperlayer];
     
+    [self.player removeTimeObserver:self.playerTimeObserver];
+    self.playerTimeObserver = nil;
     self.player = nil;
     [self.playerItems removeAllObjects];
     self.playerItems = nil;
@@ -188,19 +221,29 @@
 - (void)createPlayerItems {
     // Create playerItems
     for (NSURL * url in self.videoUrls) {
+//        NSString * fileName = [self cachedFileNameForKey:url.absoluteString];
+        // TODO: If item exists locally then create player item
+        
+//        AVPlayerItem *item = [self.resourceLoaderManager playerItemWithURL:url];
         AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
         [self.playerItems addObject:item];
+//        VICacheConfiguration *configuration = [VICacheManager cacheConfigurationForURL:url];
+//        if (configuration.progress >= 1.0) {
+//            NSLog(@"cache completed");
+//        }
+        
+//        [[[self class] sharedDownloadManager] addDownloadTask:fileName fileURL:url.absoluteString];
     }
     
     __weak __typeof(self) weakSelf = self;
-    if (self.playerItems.count > 0) {
+    if (self.videoUrls.count > 0) {
         // Listen for PlayerItem End notification
         [NSNotificationCenter.defaultCenter addObserverForName:AVPlayerItemDidPlayToEndTimeNotification
                                                         object:nil
                                                          queue:[NSOperationQueue mainQueue]
                                                     usingBlock:^(NSNotification * _Nonnull note)
          {
-             if ([self.playerItems lastObject] == note.object) {
+             if ([weakSelf.playerItems lastObject] == note.object) {
                  NSLog(@"IT REACHED THE END");
                  [weakSelf.presentingViewController dismissViewControllerAnimated:YES completion:^{
                      
@@ -214,7 +257,7 @@
 }
 - (void)createPlayer {
     __weak typeof(self) weakSelf = self;
-    if (self.playerItems.count > 0) {
+    if (self.videoUrls.count > 0) {
         // Create player
         self.player = [AVPlayer playerWithPlayerItem:self.playerItems[self.currentItemIndex]];
 //        AVPlayerItem * testItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/OTskm12IalYJ42tTU8LQudIzYeF3%2Fmessage_reaction_video_-Ki4CrJxC7JsHR1Cs_a7%2F1492588684179.mp4?alt=media&token=e282e01b-d099-41c4-a165-cbf78e108a7d"]];
@@ -222,16 +265,14 @@
         [self.player setVolume:1.0f];
         
         // Listen for PlayerItem Progress notification
-        [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, 3)
-                                                  queue:dispatch_get_main_queue()
+        self.playerTimeObserver = [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, 10)
+                                                  queue:dispatch_queue_create("player.time.queue", NULL)
                                              usingBlock:^(CMTime time)
          {
              
              if(!weakSelf){
                  return;
              }
-             
-             //             float currentBuffer = [weakSelf currentBuffer];
              float currentProgress = [weakSelf currentProgress];
              [weakSelf updateProgress:currentProgress animated:YES];
          }];
@@ -248,7 +289,7 @@
 }
 #pragma mark - Private Fuctions - Play
 - (void)playCurrentVideo {
-    if (self.playerItems.count > 0) {
+    if (self.videoUrls.count > 0) {
         AVPlayerItem * currentItem = [self playerItemAtIndex:self.currentItemIndex];
         
         if (currentItem.status != AVPlayerStatusReadyToPlay) {
@@ -262,7 +303,7 @@
     }
 }
 - (void)loadNextVideo {
-    if (self.currentItemIndex+1 < self.playerItems.count) {
+    if (self.currentItemIndex+1 < self.videoUrls.count) {
         [self releasePlayerItemKVOs:self.player.currentItem];
         self.currentItemIndex++;
     } else {
@@ -301,21 +342,21 @@
                     options:options
                     context:nil];
     
-    [playerItem addObserver:self
-                 forKeyPath:@"playbackBufferFull"
-                    options:options
-                    context:nil];
-    
-    [playerItem addObserver:self
-                 forKeyPath:@"status"
-                    options:options
-                    context:nil];
+//    [playerItem addObserver:self
+//                 forKeyPath:@"playbackBufferFull"
+//                    options:options
+//                    context:nil];
+//    
+//    [playerItem addObserver:self
+//                 forKeyPath:@"status"
+//                    options:options
+//                    context:nil];
 }
 - (void)releasePlayerItemKVOs:(AVPlayerItem *)playerItem {
     [playerItem removeObserver:self forKeyPath:@"playbackBufferEmpty"];
     [playerItem removeObserver:self forKeyPath:@"playbackLikelyToKeepUp"];
-    [playerItem removeObserver:self forKeyPath:@"playbackBufferFull"];
-    [playerItem removeObserver:self forKeyPath:@"status"];
+//    [playerItem removeObserver:self forKeyPath:@"playbackBufferFull"];
+//    [playerItem removeObserver:self forKeyPath:@"status"];
 //    [playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
 //    [playerItem removeObserver:self forKeyPath:@"currentTime"];
 }
@@ -379,4 +420,62 @@
         
     }
 }
+
+//#pragma mark - MZDownloadManagerDelegate
+//- (void)downloadRequestDidUpdateProgress:(MZDownloadModel *)downloadModel index:(NSInteger)index{
+//    NSLog(@"Progress delegate");
+//}
+//- (void)downloadRequestFinished:(MZDownloadModel *)downloadModel index:(NSInteger)index {
+//    NSLog(@"Download Finished");
+//    // TODO: File downloaded. Create playerItem & and to array (if needed)
+//}
+//- (void)downloadRequestDidPopulatedInterruptedTasks:(NSArray<MZDownloadModel *> *)downloadModels {
+//    NSLog(@"InterruptedTasks delegate");
+//}
+//- (NSString *)downloadFolderPath {
+//    return [[MZUtility baseFilePath] stringByAppendingPathComponent:@"Videos"];
+//}
+//- (NSString *)filePathWithURL:(NSString *)urlString {
+//    NSString * downloadFolderPath = [self downloadFolderPath];
+//    NSString * fileName = [self cachedFileNameForKey:[urlString componentsSeparatedByString:@"?"][0]];
+//    NSString * filePath = [downloadFolderPath stringByAppendingPathComponent:fileName];
+//    return filePath;
+//}
+//- (nullable NSString *)cachedFileNameForKey:(nullable NSString *)key {
+//    const char *str = key.UTF8String;
+//    if (str == NULL) {
+//        str = "";
+//    }
+//    unsigned char r[CC_MD5_DIGEST_LENGTH];
+//    CC_MD5(str, (CC_LONG)strlen(str), r);
+//    NSString *filename = [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%@",
+//                          r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], r[9], r[10],
+//                          r[11], r[12], r[13], r[14], r[15], [key.pathExtension isEqualToString:@""] ? @"" : [NSString stringWithFormat:@".%@", key.pathExtension]];
+//    
+//    return filename;
+//}
+////Oppotunity to handle destination does not exists error
+////This delegate will be called on the session queue so handle it appropriately
+//- (void)downloadRequestDestinationDoestNotExists:(MZDownloadModel *)downloadModel index:(NSInteger)index location:(NSURL *)location {
+//    NSString * downloadFolderPath = [self downloadFolderPath];
+//    BOOL folderAlreadyCreated = [[NSFileManager defaultManager] fileExistsAtPath:downloadFolderPath];
+//    if (!folderAlreadyCreated) {
+//        // Create download folder
+//        @try {
+//            [[NSFileManager defaultManager] createDirectoryAtPath:downloadFolderPath withIntermediateDirectories:YES attributes:nil error:nil];
+//            // Move file to download folder
+//        } @catch (NSException *exception) {
+//            NSLog(@"Error: Download directory can't be created");
+//        }
+//    } else {
+//        // Move file to download folder
+//        @try {
+//            NSString * filePath = [self filePathWithURL:downloadModel.fileName];
+//            [[NSFileManager defaultManager] moveItemAtURL:location toURL:[NSURL fileURLWithPath:filePath] error:nil];
+//            NSLog(@"File downloaded");
+//        } @catch (NSException *exception) {
+//            NSLog(@"Error: File can't be moved to download folder");
+//        }
+//    }
+//}
 @end

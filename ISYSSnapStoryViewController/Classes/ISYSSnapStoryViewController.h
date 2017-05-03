@@ -8,12 +8,18 @@
 
 @import UIKit;
 @import Foundation;
+//#import <MZDownloadManager/MZDownloadManager-Swift.h>
 
 @interface ISYSSnapStoryViewController : UIViewController
+//<MZDownloadManagerDelegate>
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil NS_UNAVAILABLE;
+
 - (instancetype)initWithVideoUrls:(NSArray *)videoUrls;
+
+/// Shared Download Manager
+//+ (MZDownloadManager *)sharedDownloadManager;
 
 @end

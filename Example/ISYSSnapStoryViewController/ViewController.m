@@ -28,9 +28,9 @@
     NSArray * videoUrls = @[
                             [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/YV5SmaZbwrUf5aqeVNuZnpJM5oJ3%2Fmessage_reaction_video_-Ki5r70BP8mdi7PQmB7T%2F1492616271961.mp4?alt=media&token=b9c3de52-eabd-411d-9e7b-c6a9543c7cfc"],
                             
-                            [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/j99eqqzaf2VChbGhtDSgNsLYyNx1%2Fmessage_reaction_video_-KiD0KwSsGGNqYzn2JjF%2F1492736383172.mp4?alt=media&token=2e6fd250-f1f0-4fea-9822-0c547abe7091"],
+//                            [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/j99eqqzaf2VChbGhtDSgNsLYyNx1%2Fmessage_reaction_video_-KiD0KwSsGGNqYzn2JjF%2F1492736383172.mp4?alt=media&token=2e6fd250-f1f0-4fea-9822-0c547abe7091"],
                             
-                            [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/j99eqqzaf2VChbGhtDSgNsLYyNx1%2Fmessage_reaction_video_-KiD6geKy1TRavAHgGyT%2F1492738045427.mp4?alt=media&token=acbbd205-9afa-4211-818f-ff7ce1fa44c0"],
+//                            [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/j99eqqzaf2VChbGhtDSgNsLYyNx1%2Fmessage_reaction_video_-KiD6geKy1TRavAHgGyT%2F1492738045427.mp4?alt=media&token=acbbd205-9afa-4211-818f-ff7ce1fa44c0"],
                             
                             [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/lGFngFbsOHhAHMygEUuER3qIoR93%2Fmessage_reaction_video_-Ki5wNs-NqkOS--pf7At%2F1492617646099.mp4?alt=media&token=1b23ecf5-2adc-4bdf-9368-7993da66c016"],
                             
@@ -42,6 +42,12 @@
     [self presentViewController:controller animated:YES completion:^{
         
     }];
+    
+    [self testDownload];
+}
+
+- (void)testDownload {
+    
 }
 
 /*

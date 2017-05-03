@@ -11,7 +11,8 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
++ (AppDelegate *)appDelegate;
+@property (strong, nonatomic) void (^completionHandler)();
 
 @end
 
