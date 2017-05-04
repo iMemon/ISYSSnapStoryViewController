@@ -310,7 +310,7 @@
         [self registerPlayerItemKVOs:newItemToPlay];
         
         [self.player replaceCurrentItemWithPlayerItem:newItemToPlay];
-        [self.player.currentItem seekToTime:CMTimeMakeWithSeconds(0.001, 10000)];
+        [self.player.currentItem seekToTime:kCMTimeZero];
         if (self.player.currentItem.status != AVPlayerStatusReadyToPlay) {
             self.isLoading = YES;
         }
@@ -416,7 +416,7 @@
                 // something went wrong. player.error should contain some information
                 NSLog(@"player error %@", currentItem.error);
             } else {
-                weakSelf.isLoading = YES;
+                weakSelf.isLoading = NO;
             }
         }
         
