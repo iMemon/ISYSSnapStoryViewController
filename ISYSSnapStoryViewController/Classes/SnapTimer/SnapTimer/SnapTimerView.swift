@@ -19,7 +19,7 @@ import UIKit
 
 	internal var animationsPaused = false
 
-	@IBInspectable var mainBackgroundColor: UIColor = UIColor.darkGray {
+	@IBInspectable var mainBackgroundColor: UIColor = UIColor.clear {
 		didSet {
 			self.mainCircleLayer.circleColor = self.mainBackgroundColor.cgColor
 		}

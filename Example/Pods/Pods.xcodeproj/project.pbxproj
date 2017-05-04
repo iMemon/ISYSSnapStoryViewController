@@ -7,85 +7,85 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02C98B738466C9CF50919AB7F2AC4194 /* RTSpinKitWaveAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = DE22BF02349D11B41951317436D6FA41 /* RTSpinKitWaveAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		006EE60D2DB67A08B68AB8DFE19DC21A /* RTSpinKitCircleFlipAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3784A6B0E11661A6B58B4DDD1CC77 /* RTSpinKitCircleFlipAnimation.m */; };
 		05F12F0AB0C451B1C5C218FC2BCC855C /* Pods-ISYSSnapStoryViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E13331681C05A099B011507BE1D0EC /* Pods-ISYSSnapStoryViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0765A93DC4AF351E4F89E3A639AC8A5D /* VIMediaCache.h in Headers */ = {isa = PBXBuildFile; fileRef = ABCF3BD26CA8C7A2A47872A2F86C521B /* VIMediaCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11DAEEDDA85DB82012AF72AE53E0B013 /* RTSpinKitFadingCircleAltAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8017AA5C2F1CF2FC4147CD0CB56AF2FC /* RTSpinKitFadingCircleAltAnimation.m */; };
-		17B01E11498EEE7315D27BA236767455 /* SnapTimerBorderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7731DED9352BB9DFFD04252B83273899 /* SnapTimerBorderLayer.swift */; };
-		17EF6F76EA5CDE0E2E1B566A9035A435 /* RTSpinKitWanderingCubesAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E97E66E03A97F0FF81C543C240CF204 /* RTSpinKitWanderingCubesAnimation.m */; };
-		1987FE1F92B9C94A68E9F9FA62A93690 /* VICacheAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C1C129A836D8865820299E826283C8 /* VICacheAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		062CBFFACCF64212401B7309A9595468 /* SpinKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F14A8E0B3772C19B4445B5FAF3C7FCB /* SpinKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		095A09AC6081618AECE3511396A8A8A9 /* VICacheSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6351610A950A87449C93DC8C583C34F /* VICacheSessionManager.m */; };
+		11132730C3B3FCB911C28A8AA383C667 /* RTSpinKitFadingCircleAltAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3B0450799903ABB4AF75526DB1ABD8 /* RTSpinKitFadingCircleAltAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		164B796BB0D64691571BE3DEEF2F9BFD /* VIResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D1E939C5EE909312400C166FF35519 /* VIResourceLoader.m */; };
+		1A07F25F2FC9535C958C67B6A054E281 /* RTSpinKitFadingCircleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C1F866B4324177F4A583CDFCB55D1E /* RTSpinKitFadingCircleAnimation.m */; };
 		1AA3BD3F79935974ABE2041E596995F0 /* Pods-ISYSSnapStoryViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 646D8C98C50999B18E82EB51D1997A61 /* Pods-ISYSSnapStoryViewController_Example-dummy.m */; };
-		1B536E849C32F689E5CD35A9DDE7C414 /* VIResourceLoadingRequestWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = E5656BD53D8B2EF5E43F5F6346B7B3F1 /* VIResourceLoadingRequestWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F2ADAAE7FA3CB58DF2D88DCCC3DC74A /* SnapTimerCircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9354831CA1B4253509E2B60D1ACD6D1 /* SnapTimerCircleLayer.swift */; };
-		201181E162106CF7B3071D04D2F7266C /* RTSpinKitCircleFlipAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3784A6B0E11661A6B58B4DDD1CC77 /* RTSpinKitCircleFlipAnimation.m */; };
-		240E29F598E756AD514D972875393E42 /* VIMediaDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2658DEBD74E9D9DFF239D8A0AF332C20 /* VIMediaDownloader.m */; };
-		24F13EE71D1FDA88CA7367B76F31C092 /* RTSpinKitView.h in Headers */ = {isa = PBXBuildFile; fileRef = D264DD2764DF52A26FBEE5955C2F3916 /* RTSpinKitView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2660DCB34300FE55AD39860A5A1BE398 /* RTSpinKitThreeBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E1340EBDB5790B5197819145A8B904AC /* RTSpinKitThreeBounceAnimation.m */; };
-		2AD503BC3F1F2F19DD17386CF56773FE /* VICacheSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2753ACCBDD0EC2F123D8C406303B56 /* VICacheSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2BE50A31B47785E420350141253AE314 /* VIMediaCacheWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = 84E51CBEC81C0078A982E220F42277B4 /* VIMediaCacheWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C834C45EE1479B26DD832B1C0A3DAC9 /* RTSpinKitThreeBounceAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FB631AAC81BA2F822EB7B954E2DB723 /* RTSpinKitThreeBounceAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2D88F62CBA620526E36FDA9494249C4E /* VICacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9417B3081317A239E03BFDF9E3A019EE /* VICacheManager.m */; };
-		2E5116196BA3F7BEF107F4249257D777 /* RTSpinKitPulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CACB9BA982D18BF3F4C96BA227D8E947 /* RTSpinKitPulseAnimation.m */; };
-		301F044F4F29B047B2836D862369ABE3 /* SnapTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A3CCBE8F1540104EF6D05A0E5B7CE0 /* SnapTimerView.swift */; };
-		3814A359EDCA245D321D6B274DF08F82 /* VIContentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B800E454E9E07C5C1AE47F449E05D768 /* VIContentInfo.m */; };
-		3B068EA44E1D2C5852587AB361C91EB5 /* VIResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = DF885068D7DCE2BEAA33147DA57B0EB0 /* VIResourceLoader.m */; };
-		401771AB9651F04210A5C7CF67687979 /* RTSpinKitFadingCircleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = BE6142820B58760A6053351CAA178034 /* RTSpinKitFadingCircleAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		42A1EF05BD249826B55AFA47B5AD05FB /* RTSpinKitArcAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 529B0FA046FF0544877FB7E68FD27465 /* RTSpinKitArcAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		43001530433E4E2D4BFA14DFF6D2798A /* RTSpinKitUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 81AB37091D8BED722A0FDE52C43E6A38 /* RTSpinKitUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		44117434EF079A2A51453DB12F11B699 /* RTSpinKit9CubeGridAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F4C9B0F1B825C4EEFAC6D91F41DAB8 /* RTSpinKit9CubeGridAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		45AF9DE33771411BB37A73B70CE9AAE5 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 3D445597104CF4309033B8698C0BCA28 /* LICENSE.md */; };
-		460FFF33C114DAA38BDC3EFDF145BE26 /* SpinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0306B4A22289D6C3A35604C2373FB665 /* SpinKit.framework */; };
-		4E348DCDD5E2D6FC862562364EA914C4 /* RTSpinKit9CubeGridAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB9BA69AD0DC695D94E011CC74A05D /* RTSpinKit9CubeGridAnimation.m */; };
-		59025D2AEE9084F199843C36F728B66A /* VICacheConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 096AC5DDD2A814C98D4B242A629FF05D /* VICacheConfiguration.m */; };
-		5B89F7E9CDEDC1468AEBAD29830FEE6A /* RTSpinKitPlaneAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = C98CBF348F713FBCBBF9FB02D243BF06 /* RTSpinKitPlaneAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5D089AA5B05DC04088E55E8CA5D40262 /* VIContentInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D8E1E809FFBD1C278BE5F8A56C658E6D /* VIContentInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60D58ADEE999B4862318EFAC57129D06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ED4ED34CD9FF98EEF78F6ACD0D109D /* Foundation.framework */; };
-		65A42FDDF192ACAD005BDABC5A8A2198 /* RTSpinKitWaveAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3E0144E0F31DB6138F09DD43DA6AD /* RTSpinKitWaveAnimation.m */; };
-		6B70EAF35B97A7BABD5A5741A08089CF /* RTSpinKitArcAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DA9027B23D0AB93AB528A2189DA973 /* RTSpinKitArcAnimation.m */; };
-		6C3950D66B2484A8E061ADA2CB7DE3AB /* RTSpinKitCircleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E884EEDAD9A40DDAC80BA5DD2F76012 /* RTSpinKitCircleAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		73EA71C3C0D8482369E9E93C3BFC2DF6 /* RTSpinKitArcAltAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162623727741C22A710FC553E6F8D94 /* RTSpinKitArcAltAnimation.m */; };
-		74B468E7A0C418D403E75B2918441457 /* RTSpinKitChasingDotsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 705ECC03F6D617019527AE8A9034554C /* RTSpinKitChasingDotsAnimation.m */; };
-		7FBC5CAA942D7587CD397D46F59BEBF3 /* VIResourceLoaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7E109ACC2360B147E1A9811512CC7 /* VIResourceLoaderManager.m */; };
-		80F1ABDF45F9A23ADF1659FC8F16A070 /* VICacheSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87546CBF7B1A5B5752D90595F907B262 /* VICacheSessionManager.m */; };
-		8183E9C8940780FF9DB3B3A46EAAE5A0 /* SpinKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F14A8E0B3772C19B4445B5FAF3C7FCB /* SpinKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		84B64DEFD94E483D3A3AF179B97A2E74 /* RTSpinKitAnimating.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB845C80E2089F1BEAD1DDFD322F03F /* RTSpinKitAnimating.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		884D1B0E359632B2023028C2E5BC9452 /* ISYSSnapStoryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC41785DE07BAF5898CF59B9CA25977D /* ISYSSnapStoryViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88C36CE6033350ABD12E64D67D14CBD2 /* VICacheAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A099B57EDCB7228A1D3F683C2E042C /* VICacheAction.m */; };
-		8BD609F21EBA25A1009D4EFE /* ISYSPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD609F01EBA25A1009D4EFE /* ISYSPlayerView.h */; };
-		8BD609F31EBA25A1009D4EFE /* ISYSPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD609F11EBA25A1009D4EFE /* ISYSPlayerView.m */; };
-		8E1B7AEB94630E618450F3026EA0E521 /* RTSpinKitCircleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FE24910D3CA3A02BBF49636E6587A8 /* RTSpinKitCircleAnimation.m */; };
+		2067F87350DC05AE7BD23797E92ED4B5 /* RTSpinKitArcAltAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 596904FA696F8D52F25D655EDC67C9A9 /* RTSpinKitArcAltAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		26BE98623DB11EAB02F749E5503CCAB4 /* RTSpinKitCircleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E884EEDAD9A40DDAC80BA5DD2F76012 /* RTSpinKitCircleAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		343A733F34FB141123143D0F2CB72375 /* SnapTimerBorderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A670D32170E7CCFC13F6776C17D202 /* SnapTimerBorderLayer.swift */; };
+		399DF72B047AFAE87A74B1D741B70F6C /* RTSpinKit9CubeGridAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB9BA69AD0DC695D94E011CC74A05D /* RTSpinKit9CubeGridAnimation.m */; };
+		3D76BDCC724BAEA49AE97BFEF4CAEF80 /* VIContentInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA93E9724A225917EF2553206E57392 /* VIContentInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FE57132E5CA3AA422888536FCED896A /* SnapTimerCircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3D3C74C26D82F9A02D6D51923F83A /* SnapTimerCircleLayer.swift */; };
+		40088B97C4BEB37899A6D71C4032AC14 /* RTSpinKitThreeBounceAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FB631AAC81BA2F822EB7B954E2DB723 /* RTSpinKitThreeBounceAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		47064944313BEE433778DBA0409181EF /* ISYSPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD60BB5EFC285A23615F08C004A46BEC /* ISYSPlayerView.m */; };
+		4A62F05BD033E4738BF54680CB2A6284 /* VICacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0962167B24E773C0C6B3D45BF1CC90F /* VICacheManager.m */; };
+		4C99A2F34B88788376831A83144B98C2 /* VIResourceLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4E2DA3DB73CE20B22661DAFC076FA4 /* VIResourceLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CC305CA8917BA0C6FA3FEA47E7638DE /* VIMediaDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CF7FE02B9704FED47FFAB34B39A519 /* VIMediaDownloader.m */; };
+		513665EA4D84F026A0B91E7BF89D08FE /* RTSpinKitCircleFlipAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E3B8543424BD18BFB9DA28BC357FB0 /* RTSpinKitCircleFlipAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5435B27554E8ED4FDD361C8CBDBDD284 /* VIResourceLoaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 069FACFFFFA73DA2058146FA9742ACF6 /* VIResourceLoaderManager.m */; };
+		56A62E342FD66CFFB3B8D41469D38188 /* RTSpinKitArcAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 529B0FA046FF0544877FB7E68FD27465 /* RTSpinKitArcAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		590170C035E128A4FF6827EE6404F9DE /* VIContentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D4186EDAA20FAD61F65669F4F38D89D4 /* VIContentInfo.m */; };
+		5953113864F292DD5AD6459082CD0095 /* RTSpinKitPlaneAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = C98CBF348F713FBCBBF9FB02D243BF06 /* RTSpinKitPlaneAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5CAA9522F4827A089F6620D60DA47FFF /* RTSpinKitChasingDotsAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 19086586A63C76A1B8708872DA488418 /* RTSpinKitChasingDotsAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5D2ADA32AAC033FE2865A2541C69D717 /* SnapTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5361AFB6876389F816C7A77767DEE74F /* SnapTimerView.swift */; };
+		5F71BBEE8E034D968B927D82C246520F /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 477D7CC6F6B8049ED202E5C210349E9C /* LICENSE.md */; };
+		60B0794CFA151BCE801BAD1BDBF9211C /* RTSpinKit9CubeGridAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F4C9B0F1B825C4EEFAC6D91F41DAB8 /* RTSpinKit9CubeGridAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		68CDAD644A49F557502E77E086B90BAD /* RTSpinKitPulseAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = D6FD74FCB02C1FAC08FB72A92087B51A /* RTSpinKitPulseAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		70268F6E982D9D8194D09720A0FB8703 /* RTSpinKitArcAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DA9027B23D0AB93AB528A2189DA973 /* RTSpinKitArcAnimation.m */; };
+		7269C0EF6CA4D46C7917AC6DF97E1D95 /* ISYSSnapStoryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F634C2D57C3FECA445240A88C7410D /* ISYSSnapStoryViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76C4C8FCD4FD7AFADDB6212081D759A9 /* RTSpinKitWaveAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3E0144E0F31DB6138F09DD43DA6AD /* RTSpinKitWaveAnimation.m */; };
+		76E88B02C94868A57A4B9BF11BF8C88D /* RTSpinKitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C60301188DAD76A87E100229AB9AF493 /* RTSpinKitView.m */; };
+		826DBB34526F3E3C2DF9659A9EDB856B /* RTSpinKitFadingCircleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = BE6142820B58760A6053351CAA178034 /* RTSpinKitFadingCircleAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		859083077F65D905142A4DCD90EE0D60 /* RTSpinKitThreeBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E1340EBDB5790B5197819145A8B904AC /* RTSpinKitThreeBounceAnimation.m */; };
+		89E1FF417E8F7A7C055E65AFB2C5FF58 /* VICacheConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 090333258787978C6B3BC589FD0D695D /* VICacheConfiguration.m */; };
+		8EE55C731DB43DB8895DC92CC435A3C0 /* RTSpinKitPlaneAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8138C9354337184FBE6068817127CE9A /* RTSpinKitPlaneAnimation.m */; };
 		8FBB4D11A3EF803A01E1FDEB8C32B397 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ED4ED34CD9FF98EEF78F6ACD0D109D /* Foundation.framework */; };
+		940CD95788E833B15DDCB961B18C1707 /* RTSpinKitAnimating.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB845C80E2089F1BEAD1DDFD322F03F /* RTSpinKitAnimating.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9AA9A442B820A52B3B8DA198C9EA6184 /* VICacheConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A56324B6C8AF0CFF5A8E121448E48C9 /* VICacheConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9ABC2E695142C3AFFE963CF11CBB2802 /* VICacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F29BFC47DDFD711C11E9B800D302683 /* VICacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B534C8575470DE488932A53758F904C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ED4ED34CD9FF98EEF78F6ACD0D109D /* Foundation.framework */; };
 		9C73EA2DD48487865774047F7EAB6537 /* Pods-ISYSSnapStoryViewController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D325B36554C94F5AD1973B8055DF7 /* Pods-ISYSSnapStoryViewController_Tests-dummy.m */; };
-		9DEB9E661AA8C28CB1994DD434BA82E1 /* VIResourceLoaderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7478A2775FA599CA26ABC8DC1BE84460 /* VIResourceLoaderManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A0E15E329D10600CF50081D191168029 /* RTSpinKitCircleFlipAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E3B8543424BD18BFB9DA28BC357FB0 /* RTSpinKitCircleFlipAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A68978B98B5221A8ECBF72C9B77B7BBA /* RTSpinKitPulseAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = D6FD74FCB02C1FAC08FB72A92087B51A /* RTSpinKitPulseAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A92838C45D4CAB334B688AA7DB11590A /* VICacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DCEE67D645AEDC6A3F30E6C023BA45D /* VICacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB64BA95846195F6543C858253BC9B25 /* RTSpinKitFadingCircleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C1F866B4324177F4A583CDFCB55D1E /* RTSpinKitFadingCircleAnimation.m */; };
-		ABB09C2555EF376EDE1C37B036536D93 /* ISYSSnapStoryViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27EB4E590C28894779D395CD783815D2 /* ISYSSnapStoryViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ABF84673A505F7D2C94E41F5DEE229DE /* RTSpinKitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BD1B768AA6B4E04635F060ABBA67C6 /* RTSpinKitUtils.m */; };
-		AF1071777186A458FF497CCECEF94D93 /* RTSpinKitBounceAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AB0621552473009E31023512F09A0AA /* RTSpinKitBounceAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B29EE71CFC855BFDB1FC82B7282FA876 /* RTSpinKitFadingCircleAltAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3B0450799903ABB4AF75526DB1ABD8 /* RTSpinKitFadingCircleAltAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B2F28CA9176529071EF64693F68AB87D /* RTSpinKitArcAltAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 596904FA696F8D52F25D655EDC67C9A9 /* RTSpinKitArcAltAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B483E3E0D4047870284AF5439BDDFD19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E02DA0018805EBB061514D59039CA12F /* UIKit.framework */; };
-		BD499E83E51D33CCA3B595D94DFC3EB9 /* ISYSSnapStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CFC96BF0AB429FC364D918A785B37A /* ISYSSnapStoryViewController.m */; };
-		C3539FEBFB00B2A5967D67918802E32F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ED4ED34CD9FF98EEF78F6ACD0D109D /* Foundation.framework */; };
-		C45C13D76E7AF69A642D90A2D48725DB /* VIMediaCacheWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = DE27EA031A60DF93CFBE1A9424E1A750 /* VIMediaCacheWorker.m */; };
+		9CEFADC4DE6B615A83E8570792E9B208 /* VIMediaCacheWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC2037841DCDFBCEBD85D7887B1CF7 /* VIMediaCacheWorker.m */; };
+		9E134F104DC527C3475728865418EE20 /* VIMediaCacheWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = 611E5B441E001223886D8BFE3437C728 /* VIMediaCacheWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E195E91DB1145B62B8EC4594DFF1A7A /* RTSpinKitFadingCircleAltAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8017AA5C2F1CF2FC4147CD0CB56AF2FC /* RTSpinKitFadingCircleAltAnimation.m */; };
+		9F5CA14F0D6D604F993B485FBF75D2D3 /* RTSpinKitCircleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FE24910D3CA3A02BBF49636E6587A8 /* RTSpinKitCircleAnimation.m */; };
+		A28FA7EB35FD1AC04D733807C970C439 /* ISYSSnapStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A0B192D4DCEB44CBD5AA661B6D62F /* ISYSSnapStoryViewController.m */; };
+		A495D9D4AC859DCDD7BA5FC11621439E /* RTSpinKitBounceAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AB0621552473009E31023512F09A0AA /* RTSpinKitBounceAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ACE7793627F250878379AA21CD792BE7 /* VIMediaDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = BCB7212035E63E096E9EE667AD97B1DD /* VIMediaDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE80FD7133177DBD930846C22559AB2A /* RTSpinKitUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 81AB37091D8BED722A0FDE52C43E6A38 /* RTSpinKitUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AF8754D89624EEB8863C2865C60B27E9 /* RTSpinKitWaveAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = DE22BF02349D11B41951317436D6FA41 /* RTSpinKitWaveAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B81A84211CF4DFD40C65304714B8BB78 /* VIResourceLoadingRequestWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = 38AFBBEF53F497DA9398085491543357 /* VIResourceLoadingRequestWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B94B2645E6D96FA1D642A25B473FC704 /* ISYSSnapStoryViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27EB4E590C28894779D395CD783815D2 /* ISYSSnapStoryViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC5A22810EAB36B1C18917BDF0FC4317 /* RTSpinKitWordPressAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F520CCCE3C388938484546DD7B2682B8 /* RTSpinKitWordPressAnimation.m */; };
+		BD0BB1697C1721BFB4F3E66DB86EDCBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ED4ED34CD9FF98EEF78F6ACD0D109D /* Foundation.framework */; };
+		BFE0F03AAD4E7F69274836490F07FA17 /* VIResourceLoaderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBC91CB2E3BE5A41E8A1D3122623330 /* VIResourceLoaderManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5352A6BB1E7AEE47AF3924CE372911E /* VICacheAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 91B2662194B45C4FA1A7E2C4F6406179 /* VICacheAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6AEBAEA97926C44B84A89B0A607558D /* RTSpinKitPulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CACB9BA982D18BF3F4C96BA227D8E947 /* RTSpinKitPulseAnimation.m */; };
 		C78FE3E34C09D903323535855788611C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ED4ED34CD9FF98EEF78F6ACD0D109D /* Foundation.framework */; };
-		C9DD40F8246743A5A940593F7876D58B /* VIResourceLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 26624B261BDC44A7E20C78F37582C8D8 /* VIResourceLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D93B5A56EEFC06AB0DB540CC1B6713D5 /* RTSpinKitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C60301188DAD76A87E100229AB9AF493 /* RTSpinKitView.m */; };
-		DBD4B263DEAEE4E3542051E98FA8D15D /* RTSpinKitPlaneAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8138C9354337184FBE6068817127CE9A /* RTSpinKitPlaneAnimation.m */; };
-		DE09D666B506F69F7FEE3780AB0665F5 /* ISYSSnapStoryViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9C9CBB471B07D9F2B545CA548E635B /* ISYSSnapStoryViewController-dummy.m */; };
-		E0337C75DF903F378459B2BB0F7DDF42 /* VIMediaDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1174218057F269F1BFC40A3EDF4EA944 /* VIMediaDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E589CAE5E5328525C0F0FA45CC7A30D3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E094B52F7D634BE358729B17B7A4062B /* README.md */; };
-		E753853F90C0454234CAA1363A8A3ECF /* RTSpinKitBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 241708DA2B2E331B787F737CDF22761B /* RTSpinKitBounceAnimation.m */; };
-		EE7E8DE44B3B2E67E27690DCC1F71439 /* VICacheConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = D022BAC3E33673309CAE42C73BDF18C6 /* VICacheConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF041C673736CDFF10FA91419AF5E898 /* RTSpinKitWanderingCubesAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = DCFBA5D722769C3BBD9122359148DBD5 /* RTSpinKitWanderingCubesAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EF31D51C327391072C2FCB2CA24BD3E2 /* RTSpinKitChasingDotsAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 19086586A63C76A1B8708872DA488418 /* RTSpinKitChasingDotsAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F3172E8D35C6EBD4D5B0D93D77ADDEBA /* SpinKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F7A7E5E8AD66A8CCE12B7DE80E7E0A /* SpinKit-dummy.m */; };
-		F50E24A67AB3CB621A64738435BA6481 /* RTSpinKitWordPressAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F520CCCE3C388938484546DD7B2682B8 /* RTSpinKitWordPressAnimation.m */; };
+		C7C73DE79A9B0616B450E901D17A69BB /* SpinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0306B4A22289D6C3A35604C2373FB665 /* SpinKit.framework */; };
+		CCEC29F035B77549CC2EAB9BC2A2061A /* RTSpinKitWordPressAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ADBAA36F3DDDF984796C1A214D8F649 /* RTSpinKitWordPressAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CF993FFD9100BA8261291E92FD5CADFE /* VIResourceLoadingRequestWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCC64473E037DD67F1E6DE968065ACA /* VIResourceLoadingRequestWorker.m */; };
+		CFA03A8EBDDCD58BAB75BB39967995DB /* RTSpinKitBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 241708DA2B2E331B787F737CDF22761B /* RTSpinKitBounceAnimation.m */; };
+		D47BA580D0D8C74C1A0B20588D2F0D15 /* SpinKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F7A7E5E8AD66A8CCE12B7DE80E7E0A /* SpinKit-dummy.m */; };
+		D4DA98B6DAE788B01F3286124F5D8962 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AC4011B016A45D0F6C8A364177B78033 /* README.md */; };
+		D510C7C43CBE7DFA3ECD74EB47ADAEA5 /* ISYSPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A047C05F7619E88593D280761D9F70B /* ISYSPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6D480B5CD187D914364FBBB918ECE88 /* RTSpinKitChasingDotsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 705ECC03F6D617019527AE8A9034554C /* RTSpinKitChasingDotsAnimation.m */; };
+		D7AE6992D991B006896C5A633AC2DE67 /* RTSpinKitView.h in Headers */ = {isa = PBXBuildFile; fileRef = D264DD2764DF52A26FBEE5955C2F3916 /* RTSpinKitView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB58BA96D147DD95F60F2009C106E9BB /* ISYSSnapStoryViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9C9CBB471B07D9F2B545CA548E635B /* ISYSSnapStoryViewController-dummy.m */; };
+		DB873DD6E61128242BBE55FAB9E51491 /* RTSpinKitWanderingCubesAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = DCFBA5D722769C3BBD9122359148DBD5 /* RTSpinKitWanderingCubesAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E78514FE6BD50B282C4F4A3CF53C95ED /* VIMediaCache.h in Headers */ = {isa = PBXBuildFile; fileRef = F038E95FE5EBF61D03B1DA53DE75CE73 /* VIMediaCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9D96F40A43BC29CBC962C2A5646A301 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E02DA0018805EBB061514D59039CA12F /* UIKit.framework */; };
+		EF2B0703E367F47AA8A68968102DC5C6 /* RTSpinKitWanderingCubesAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E97E66E03A97F0FF81C543C240CF204 /* RTSpinKitWanderingCubesAnimation.m */; };
+		F95C206896BA02942B91FFF25844D4B4 /* VICacheSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF494B4D2C56E69C92CE9C34249AECC /* VICacheSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F982C31AFC6E1A253A5635A02AB59791 /* VICacheAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7563883EB6F1086CDFB14E4B065D05 /* VICacheAction.m */; };
+		FB3AF1FD50ED5002E79AAD3A1C84718C /* RTSpinKitArcAltAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162623727741C22A710FC553E6F8D94 /* RTSpinKitArcAltAnimation.m */; };
 		FB7277201B416963BF57E722967CD710 /* Pods-ISYSSnapStoryViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0254C365C435E33442A749E5CA3DD22D /* Pods-ISYSSnapStoryViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCEDA12F2551F474565B9C30F4C3A905 /* VIResourceLoadingRequestWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BA0CF89B0D6C740EE77DB0498D109 /* VIResourceLoadingRequestWorker.m */; };
-		FD0ED2C1EF6CA6D5DE458BCA670E8452 /* RTSpinKitWordPressAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ADBAA36F3DDDF984796C1A214D8F649 /* RTSpinKitWordPressAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FED47F0C47FF93711053C0807BDBD82B /* RTSpinKitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BD1B768AA6B4E04635F060ABBA67C6 /* RTSpinKitUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,21 +93,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A6141075F19C40567BAD3952F64421EE;
+			remoteGlobalIDString = 13D576C8DAF606131CD91EE76F9B4709;
 			remoteInfo = ISYSSnapStoryViewController;
+		};
+		8D6226F436D73DF5D6410F717A42CD70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62C4F5690E845B5F9A86CB81A7D471EA;
+			remoteInfo = SpinKit;
 		};
 		91198423FC4CA06D7ADB49E5CA741531 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FB821D703F85F2F049CF89E681ED1CEF;
-			remoteInfo = SpinKit;
-		};
-		D62FD798D2A9FD7CFA758A2FC3CEB6EB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB821D703F85F2F049CF89E681ED1CEF;
+			remoteGlobalIDString = 62C4F5690E845B5F9A86CB81A7D471EA;
 			remoteInfo = SpinKit;
 		};
 /* End PBXContainerItemProxy section */
@@ -116,118 +116,126 @@
 		0254C365C435E33442A749E5CA3DD22D /* Pods-ISYSSnapStoryViewController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ISYSSnapStoryViewController_Tests-umbrella.h"; sourceTree = "<group>"; };
 		0306B4A22289D6C3A35604C2373FB665 /* SpinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F4C9B0F1B825C4EEFAC6D91F41DAB8 /* RTSpinKit9CubeGridAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKit9CubeGridAnimation.h; path = SpinKit/Animations/RTSpinKit9CubeGridAnimation.h; sourceTree = "<group>"; };
-		0659173FA80B72B34983A6A56CADCBE9 /* Pods_ISYSSnapStoryViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISYSSnapStoryViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		096AC5DDD2A814C98D4B242A629FF05D /* VICacheConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VICacheConfiguration.m; sourceTree = "<group>"; };
+		0659173FA80B72B34983A6A56CADCBE9 /* Pods_ISYSSnapStoryViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ISYSSnapStoryViewController_Tests.framework; path = "Pods-ISYSSnapStoryViewController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		069FACFFFFA73DA2058146FA9742ACF6 /* VIResourceLoaderManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VIResourceLoaderManager.m; sourceTree = "<group>"; };
+		090333258787978C6B3BC589FD0D695D /* VICacheConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VICacheConfiguration.m; sourceTree = "<group>"; };
 		0A3B0450799903ABB4AF75526DB1ABD8 /* RTSpinKitFadingCircleAltAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitFadingCircleAltAnimation.h; path = SpinKit/Animations/RTSpinKitFadingCircleAltAnimation.h; sourceTree = "<group>"; };
 		0AB0621552473009E31023512F09A0AA /* RTSpinKitBounceAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitBounceAnimation.h; path = SpinKit/Animations/RTSpinKitBounceAnimation.h; sourceTree = "<group>"; };
 		0DEB9BA69AD0DC695D94E011CC74A05D /* RTSpinKit9CubeGridAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKit9CubeGridAnimation.m; path = SpinKit/Animations/RTSpinKit9CubeGridAnimation.m; sourceTree = "<group>"; };
 		0E884EEDAD9A40DDAC80BA5DD2F76012 /* RTSpinKitCircleAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitCircleAnimation.h; path = SpinKit/Animations/RTSpinKitCircleAnimation.h; sourceTree = "<group>"; };
 		10FE24910D3CA3A02BBF49636E6587A8 /* RTSpinKitCircleAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitCircleAnimation.m; path = SpinKit/Animations/RTSpinKitCircleAnimation.m; sourceTree = "<group>"; };
-		1174218057F269F1BFC40A3EDF4EA944 /* VIMediaDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIMediaDownloader.h; sourceTree = "<group>"; };
 		19086586A63C76A1B8708872DA488418 /* RTSpinKitChasingDotsAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitChasingDotsAnimation.h; path = SpinKit/Animations/RTSpinKitChasingDotsAnimation.h; sourceTree = "<group>"; };
 		21C1F866B4324177F4A583CDFCB55D1E /* RTSpinKitFadingCircleAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitFadingCircleAnimation.m; path = SpinKit/Animations/RTSpinKitFadingCircleAnimation.m; sourceTree = "<group>"; };
 		241708DA2B2E331B787F737CDF22761B /* RTSpinKitBounceAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitBounceAnimation.m; path = SpinKit/Animations/RTSpinKitBounceAnimation.m; sourceTree = "<group>"; };
-		2658DEBD74E9D9DFF239D8A0AF332C20 /* VIMediaDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VIMediaDownloader.m; sourceTree = "<group>"; };
-		26624B261BDC44A7E20C78F37582C8D8 /* VIResourceLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIResourceLoader.h; sourceTree = "<group>"; };
 		27EB4E590C28894779D395CD783815D2 /* ISYSSnapStoryViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ISYSSnapStoryViewController-umbrella.h"; sourceTree = "<group>"; };
 		28E7432D143D1DED627780AD5D68145E /* ISYSSnapStoryViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ISYSSnapStoryViewController.xcconfig; sourceTree = "<group>"; };
 		2FB631AAC81BA2F822EB7B954E2DB723 /* RTSpinKitThreeBounceAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitThreeBounceAnimation.h; path = SpinKit/Animations/RTSpinKitThreeBounceAnimation.h; sourceTree = "<group>"; };
 		2FE4E71C543FEAC894989799FEE3FA12 /* ISYSSnapStoryViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ISYSSnapStoryViewController-prefix.pch"; sourceTree = "<group>"; };
 		31DA9027B23D0AB93AB528A2189DA973 /* RTSpinKitArcAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitArcAnimation.m; path = SpinKit/Animations/RTSpinKitArcAnimation.m; sourceTree = "<group>"; };
-		332747114D15B8FCF4459858A3B97337 /* ISYSSnapStoryViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ISYSSnapStoryViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D445597104CF4309033B8698C0BCA28 /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		324A0B192D4DCEB44CBD5AA661B6D62F /* ISYSSnapStoryViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ISYSSnapStoryViewController.m; sourceTree = "<group>"; };
+		332747114D15B8FCF4459858A3B97337 /* ISYSSnapStoryViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ISYSSnapStoryViewController.framework; path = ISYSSnapStoryViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38AFBBEF53F497DA9398085491543357 /* VIResourceLoadingRequestWorker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIResourceLoadingRequestWorker.h; sourceTree = "<group>"; };
 		3E5D325B36554C94F5AD1973B8055DF7 /* Pods-ISYSSnapStoryViewController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ISYSSnapStoryViewController_Tests-dummy.m"; sourceTree = "<group>"; };
 		3FE3784A6B0E11661A6B58B4DDD1CC77 /* RTSpinKitCircleFlipAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitCircleFlipAnimation.m; path = SpinKit/Animations/RTSpinKitCircleFlipAnimation.m; sourceTree = "<group>"; };
-		4E2753ACCBDD0EC2F123D8C406303B56 /* VICacheSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VICacheSessionManager.h; sourceTree = "<group>"; };
+		477D7CC6F6B8049ED202E5C210349E9C /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.md; sourceTree = "<group>"; };
 		4FCB698AFDAC171292C04A7E9B9031F3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5162623727741C22A710FC553E6F8D94 /* RTSpinKitArcAltAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitArcAltAnimation.m; path = SpinKit/Animations/RTSpinKitArcAltAnimation.m; sourceTree = "<group>"; };
 		51F7A7E5E8AD66A8CCE12B7DE80E7E0A /* SpinKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SpinKit-dummy.m"; sourceTree = "<group>"; };
 		529B0FA046FF0544877FB7E68FD27465 /* RTSpinKitArcAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitArcAnimation.h; path = SpinKit/Animations/RTSpinKitArcAnimation.h; sourceTree = "<group>"; };
-		56C7E109ACC2360B147E1A9811512CC7 /* VIResourceLoaderManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VIResourceLoaderManager.m; sourceTree = "<group>"; };
+		5361AFB6876389F816C7A77767DEE74F /* SnapTimerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnapTimerView.swift; sourceTree = "<group>"; };
 		596904FA696F8D52F25D655EDC67C9A9 /* RTSpinKitArcAltAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitArcAltAnimation.h; path = SpinKit/Animations/RTSpinKitArcAltAnimation.h; sourceTree = "<group>"; };
-		61B3D8E89AB59EDC292B180BEFD08506 /* Pods-ISYSSnapStoryViewController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ISYSSnapStoryViewController_Tests.modulemap"; sourceTree = "<group>"; };
+		5B7563883EB6F1086CDFB14E4B065D05 /* VICacheAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VICacheAction.m; sourceTree = "<group>"; };
+		611E5B441E001223886D8BFE3437C728 /* VIMediaCacheWorker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIMediaCacheWorker.h; sourceTree = "<group>"; };
+		61B3D8E89AB59EDC292B180BEFD08506 /* Pods-ISYSSnapStoryViewController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ISYSSnapStoryViewController_Tests.modulemap"; sourceTree = "<group>"; };
 		646D8C98C50999B18E82EB51D1997A61 /* Pods-ISYSSnapStoryViewController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ISYSSnapStoryViewController_Example-dummy.m"; sourceTree = "<group>"; };
-		6A8A3F3452066CC00B8C7E0C8DFF8D42 /* Pods_ISYSSnapStoryViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISYSSnapStoryViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A8A3F3452066CC00B8C7E0C8DFF8D42 /* Pods_ISYSSnapStoryViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ISYSSnapStoryViewController_Example.framework; path = "Pods-ISYSSnapStoryViewController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ADBAA36F3DDDF984796C1A214D8F649 /* RTSpinKitWordPressAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitWordPressAnimation.h; path = SpinKit/Animations/RTSpinKitWordPressAnimation.h; sourceTree = "<group>"; };
 		6E08DEE6318969D6A7B087C74F3122F2 /* Pods-ISYSSnapStoryViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ISYSSnapStoryViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6FBC2037841DCDFBCEBD85D7887B1CF7 /* VIMediaCacheWorker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VIMediaCacheWorker.m; sourceTree = "<group>"; };
 		705ECC03F6D617019527AE8A9034554C /* RTSpinKitChasingDotsAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitChasingDotsAnimation.m; path = SpinKit/Animations/RTSpinKitChasingDotsAnimation.m; sourceTree = "<group>"; };
-		7478A2775FA599CA26ABC8DC1BE84460 /* VIResourceLoaderManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIResourceLoaderManager.h; sourceTree = "<group>"; };
 		75E13331681C05A099B011507BE1D0EC /* Pods-ISYSSnapStoryViewController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ISYSSnapStoryViewController_Example-umbrella.h"; sourceTree = "<group>"; };
-		7731DED9352BB9DFFD04252B83273899 /* SnapTimerBorderLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnapTimerBorderLayer.swift; sourceTree = "<group>"; };
+		79CF7FE02B9704FED47FFAB34B39A519 /* VIMediaDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VIMediaDownloader.m; sourceTree = "<group>"; };
 		79ED4ED34CD9FF98EEF78F6ACD0D109D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7AA93E9724A225917EF2553206E57392 /* VIContentInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIContentInfo.h; sourceTree = "<group>"; };
 		8017AA5C2F1CF2FC4147CD0CB56AF2FC /* RTSpinKitFadingCircleAltAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitFadingCircleAltAnimation.m; path = SpinKit/Animations/RTSpinKitFadingCircleAltAnimation.m; sourceTree = "<group>"; };
-		80CFC96BF0AB429FC364D918A785B37A /* ISYSSnapStoryViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ISYSSnapStoryViewController.m; sourceTree = "<group>"; };
 		8138C9354337184FBE6068817127CE9A /* RTSpinKitPlaneAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitPlaneAnimation.m; path = SpinKit/Animations/RTSpinKitPlaneAnimation.m; sourceTree = "<group>"; };
 		81AB37091D8BED722A0FDE52C43E6A38 /* RTSpinKitUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitUtils.h; path = SpinKit/RTSpinKitUtils.h; sourceTree = "<group>"; };
 		83255BBA950525A9451CAA249E62009E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84E51CBEC81C0078A982E220F42277B4 /* VIMediaCacheWorker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIMediaCacheWorker.h; sourceTree = "<group>"; };
-		87546CBF7B1A5B5752D90595F907B262 /* VICacheSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VICacheSessionManager.m; sourceTree = "<group>"; };
-		888BA0CF89B0D6C740EE77DB0498D109 /* VIResourceLoadingRequestWorker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VIResourceLoadingRequestWorker.m; sourceTree = "<group>"; };
-		8BD609F01EBA25A1009D4EFE /* ISYSPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISYSPlayerView.h; sourceTree = "<group>"; };
-		8BD609F11EBA25A1009D4EFE /* ISYSPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISYSPlayerView.m; sourceTree = "<group>"; };
-		8C8E0738D83849D97A66FD9E8C63C058 /* SpinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DCEE67D645AEDC6A3F30E6C023BA45D /* VICacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VICacheManager.h; sourceTree = "<group>"; };
+		83A670D32170E7CCFC13F6776C17D202 /* SnapTimerBorderLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnapTimerBorderLayer.swift; sourceTree = "<group>"; };
+		87D1E939C5EE909312400C166FF35519 /* VIResourceLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VIResourceLoader.m; sourceTree = "<group>"; };
+		8C8E0738D83849D97A66FD9E8C63C058 /* SpinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SpinKit.framework; path = SpinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB3D3C74C26D82F9A02D6D51923F83A /* SnapTimerCircleLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnapTimerCircleLayer.swift; sourceTree = "<group>"; };
 		8FB845C80E2089F1BEAD1DDFD322F03F /* RTSpinKitAnimating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitAnimating.h; path = SpinKit/RTSpinKitAnimating.h; sourceTree = "<group>"; };
+		91B2662194B45C4FA1A7E2C4F6406179 /* VICacheAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VICacheAction.h; sourceTree = "<group>"; };
 		9245EB79E2F32C3501F3AC8BFC01E735 /* Pods-ISYSSnapStoryViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ISYSSnapStoryViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93C1C129A836D8865820299E826283C8 /* VICacheAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VICacheAction.h; sourceTree = "<group>"; };
-		9417B3081317A239E03BFDF9E3A019EE /* VICacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VICacheManager.m; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94BBCC01B2E614C3387039D02AE299ED /* Pods-ISYSSnapStoryViewController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ISYSSnapStoryViewController_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		94E3E0144E0F31DB6138F09DD43DA6AD /* RTSpinKitWaveAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitWaveAnimation.m; path = SpinKit/Animations/RTSpinKitWaveAnimation.m; sourceTree = "<group>"; };
+		9A047C05F7619E88593D280761D9F70B /* ISYSPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ISYSPlayerView.h; sourceTree = "<group>"; };
+		9A56324B6C8AF0CFF5A8E121448E48C9 /* VICacheConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VICacheConfiguration.h; sourceTree = "<group>"; };
 		9E97E66E03A97F0FF81C543C240CF204 /* RTSpinKitWanderingCubesAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitWanderingCubesAnimation.m; path = SpinKit/Animations/RTSpinKitWanderingCubesAnimation.m; sourceTree = "<group>"; };
 		9F14A8E0B3772C19B4445B5FAF3C7FCB /* SpinKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpinKit-umbrella.h"; sourceTree = "<group>"; };
+		9F29BFC47DDFD711C11E9B800D302683 /* VICacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VICacheManager.h; sourceTree = "<group>"; };
 		A7BD1B768AA6B4E04635F060ABBA67C6 /* RTSpinKitUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitUtils.m; path = SpinKit/RTSpinKitUtils.m; sourceTree = "<group>"; };
 		A7E3B8543424BD18BFB9DA28BC357FB0 /* RTSpinKitCircleFlipAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitCircleFlipAnimation.h; path = SpinKit/Animations/RTSpinKitCircleFlipAnimation.h; sourceTree = "<group>"; };
-		A9A3CCBE8F1540104EF6D05A0E5B7CE0 /* SnapTimerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnapTimerView.swift; sourceTree = "<group>"; };
-		ABCF3BD26CA8C7A2A47872A2F86C521B /* VIMediaCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIMediaCache.h; sourceTree = "<group>"; };
+		AC4011B016A45D0F6C8A364177B78033 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		AEF494B4D2C56E69C92CE9C34249AECC /* VICacheSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VICacheSessionManager.h; sourceTree = "<group>"; };
 		B194F97C29A48DC927854F1BC84B4C8B /* Pods-ISYSSnapStoryViewController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ISYSSnapStoryViewController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B2E006F467F8310E86843B776A132DB1 /* ISYSSnapStoryViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ISYSSnapStoryViewController.modulemap; sourceTree = "<group>"; };
+		B2E006F467F8310E86843B776A132DB1 /* ISYSSnapStoryViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ISYSSnapStoryViewController.modulemap; sourceTree = "<group>"; };
 		B4F306ACCCF93B39B1A987026B8707B7 /* Pods-ISYSSnapStoryViewController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ISYSSnapStoryViewController_Tests-resources.sh"; sourceTree = "<group>"; };
 		B66B8705B3513D24108B395E362D44EF /* SpinKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpinKit-prefix.pch"; sourceTree = "<group>"; };
-		B800E454E9E07C5C1AE47F449E05D768 /* VIContentInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VIContentInfo.m; sourceTree = "<group>"; };
+		BCB7212035E63E096E9EE667AD97B1DD /* VIMediaDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIMediaDownloader.h; sourceTree = "<group>"; };
+		BD60BB5EFC285A23615F08C004A46BEC /* ISYSPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ISYSPlayerView.m; sourceTree = "<group>"; };
+		BE4E2DA3DB73CE20B22661DAFC076FA4 /* VIResourceLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIResourceLoader.h; sourceTree = "<group>"; };
 		BE6142820B58760A6053351CAA178034 /* RTSpinKitFadingCircleAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitFadingCircleAnimation.h; path = SpinKit/Animations/RTSpinKitFadingCircleAnimation.h; sourceTree = "<group>"; };
+		C0962167B24E773C0C6B3D45BF1CC90F /* VICacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VICacheManager.m; sourceTree = "<group>"; };
 		C0EEAB56F0465633CC15AF89BF2DF07A /* SpinKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SpinKit.xcconfig; sourceTree = "<group>"; };
 		C60301188DAD76A87E100229AB9AF493 /* RTSpinKitView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitView.m; path = SpinKit/RTSpinKitView.m; sourceTree = "<group>"; };
-		C628D1878F2C7D133C46C5C9AAFD7267 /* Pods-ISYSSnapStoryViewController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ISYSSnapStoryViewController_Example.modulemap"; sourceTree = "<group>"; };
+		C628D1878F2C7D133C46C5C9AAFD7267 /* Pods-ISYSSnapStoryViewController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ISYSSnapStoryViewController_Example.modulemap"; sourceTree = "<group>"; };
 		C8AD9FDB643B87A85BED24ACCF32B749 /* Pods-ISYSSnapStoryViewController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ISYSSnapStoryViewController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C98CBF348F713FBCBBF9FB02D243BF06 /* RTSpinKitPlaneAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitPlaneAnimation.h; path = SpinKit/Animations/RTSpinKitPlaneAnimation.h; sourceTree = "<group>"; };
 		CA9C9CBB471B07D9F2B545CA548E635B /* ISYSSnapStoryViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ISYSSnapStoryViewController-dummy.m"; sourceTree = "<group>"; };
 		CACB9BA982D18BF3F4C96BA227D8E947 /* RTSpinKitPulseAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitPulseAnimation.m; path = SpinKit/Animations/RTSpinKitPulseAnimation.m; sourceTree = "<group>"; };
 		CB4A9FF9E203239E6A0AC9E4E2C8D58E /* Pods-ISYSSnapStoryViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ISYSSnapStoryViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D022BAC3E33673309CAE42C73BDF18C6 /* VICacheConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VICacheConfiguration.h; sourceTree = "<group>"; };
-		D0347EF10A734942A21E890A0FA324C9 /* SpinKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SpinKit.modulemap; sourceTree = "<group>"; };
+		D0347EF10A734942A21E890A0FA324C9 /* SpinKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SpinKit.modulemap; sourceTree = "<group>"; };
 		D264DD2764DF52A26FBEE5955C2F3916 /* RTSpinKitView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitView.h; path = SpinKit/RTSpinKitView.h; sourceTree = "<group>"; };
 		D37B7DDAF8058F5E9C069699482584D7 /* Pods-ISYSSnapStoryViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ISYSSnapStoryViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4186EDAA20FAD61F65669F4F38D89D4 /* VIContentInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VIContentInfo.m; sourceTree = "<group>"; };
 		D600FB28829EBCB1A28CEFE4FADAD64F /* Pods-ISYSSnapStoryViewController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ISYSSnapStoryViewController_Example-frameworks.sh"; sourceTree = "<group>"; };
 		D6FD74FCB02C1FAC08FB72A92087B51A /* RTSpinKitPulseAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitPulseAnimation.h; path = SpinKit/Animations/RTSpinKitPulseAnimation.h; sourceTree = "<group>"; };
-		D8E1E809FFBD1C278BE5F8A56C658E6D /* VIContentInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIContentInfo.h; sourceTree = "<group>"; };
-		D9354831CA1B4253509E2B60D1ACD6D1 /* SnapTimerCircleLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnapTimerCircleLayer.swift; sourceTree = "<group>"; };
 		DA96BD7D3E6DF5339299D78A7B6A1752 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCFBA5D722769C3BBD9122359148DBD5 /* RTSpinKitWanderingCubesAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitWanderingCubesAnimation.h; path = SpinKit/Animations/RTSpinKitWanderingCubesAnimation.h; sourceTree = "<group>"; };
 		DE22BF02349D11B41951317436D6FA41 /* RTSpinKitWaveAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSpinKitWaveAnimation.h; path = SpinKit/Animations/RTSpinKitWaveAnimation.h; sourceTree = "<group>"; };
-		DE27EA031A60DF93CFBE1A9424E1A750 /* VIMediaCacheWorker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VIMediaCacheWorker.m; sourceTree = "<group>"; };
-		DF885068D7DCE2BEAA33147DA57B0EB0 /* VIResourceLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VIResourceLoader.m; sourceTree = "<group>"; };
+		DFCC64473E037DD67F1E6DE968065ACA /* VIResourceLoadingRequestWorker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VIResourceLoadingRequestWorker.m; sourceTree = "<group>"; };
 		E02DA0018805EBB061514D59039CA12F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		E094B52F7D634BE358729B17B7A4062B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E1340EBDB5790B5197819145A8B904AC /* RTSpinKitThreeBounceAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitThreeBounceAnimation.m; path = SpinKit/Animations/RTSpinKitThreeBounceAnimation.m; sourceTree = "<group>"; };
 		E14B28C1212FDEFD5AD0554FF65102AB /* Pods-ISYSSnapStoryViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ISYSSnapStoryViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E5656BD53D8B2EF5E43F5F6346B7B3F1 /* VIResourceLoadingRequestWorker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIResourceLoadingRequestWorker.h; sourceTree = "<group>"; };
+		E6351610A950A87449C93DC8C583C34F /* VICacheSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VICacheSessionManager.m; sourceTree = "<group>"; };
 		E6EB06F45D9EB988B0E69E7552047FE8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7A099B57EDCB7228A1D3F683C2E042C /* VICacheAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VICacheAction.m; sourceTree = "<group>"; };
-		EC41785DE07BAF5898CF59B9CA25977D /* ISYSSnapStoryViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ISYSSnapStoryViewController.h; sourceTree = "<group>"; };
+		E6F634C2D57C3FECA445240A88C7410D /* ISYSSnapStoryViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ISYSSnapStoryViewController.h; sourceTree = "<group>"; };
 		EFF7C1C0630DD0974B8860DF3157F1F2 /* Pods-ISYSSnapStoryViewController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ISYSSnapStoryViewController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		F038E95FE5EBF61D03B1DA53DE75CE73 /* VIMediaCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIMediaCache.h; sourceTree = "<group>"; };
 		F273186319BD97EF219BC28405B62846 /* Pods-ISYSSnapStoryViewController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ISYSSnapStoryViewController_Example-resources.sh"; sourceTree = "<group>"; };
 		F520CCCE3C388938484546DD7B2682B8 /* RTSpinKitWordPressAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTSpinKitWordPressAnimation.m; path = SpinKit/Animations/RTSpinKitWordPressAnimation.m; sourceTree = "<group>"; };
+		FBBC91CB2E3BE5A41E8A1D3122623330 /* VIResourceLoaderManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VIResourceLoaderManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		08C9A1D14A8E4935F389AD2F2345F324 /* Frameworks */ = {
+		895659855B01326180ACC7D7A0904FB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3539FEBFB00B2A5967D67918802E32F /* Foundation.framework in Frameworks */,
-				460FFF33C114DAA38BDC3EFDF145BE26 /* SpinKit.framework in Frameworks */,
-				B483E3E0D4047870284AF5439BDDFD19 /* UIKit.framework in Frameworks */,
+				BD0BB1697C1721BFB4F3E66DB86EDCBE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94B3BBF4D6F57890629FB2120850D53F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B534C8575470DE488932A53758F904C /* Foundation.framework in Frameworks */,
+				C7C73DE79A9B0616B450E901D17A69BB /* SpinKit.framework in Frameworks */,
+				E9D96F40A43BC29CBC962C2A5646A301 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FBB4D11A3EF803A01E1FDEB8C32B397 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F1DBA4A55550E478A237E00E27F79A5D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				60D58ADEE999B4862318EFAC57129D06 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,10 +267,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		13372C3B7457E4A2F8D31095798EF170 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				91B2662194B45C4FA1A7E2C4F6406179 /* VICacheAction.h */,
+				5B7563883EB6F1086CDFB14E4B065D05 /* VICacheAction.m */,
+				9A56324B6C8AF0CFF5A8E121448E48C9 /* VICacheConfiguration.h */,
+				090333258787978C6B3BC589FD0D695D /* VICacheConfiguration.m */,
+				9F29BFC47DDFD711C11E9B800D302683 /* VICacheManager.h */,
+				C0962167B24E773C0C6B3D45BF1CC90F /* VICacheManager.m */,
+				AEF494B4D2C56E69C92CE9C34249AECC /* VICacheSessionManager.h */,
+				E6351610A950A87449C93DC8C583C34F /* VICacheSessionManager.m */,
+				611E5B441E001223886D8BFE3437C728 /* VIMediaCacheWorker.h */,
+				6FBC2037841DCDFBCEBD85D7887B1CF7 /* VIMediaCacheWorker.m */,
+			);
+			name = Cache;
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		20B465DCB0541CC61D20F48B0FD3D050 /* VIMediaCache */ = {
+			isa = PBXGroup;
+			children = (
+				F038E95FE5EBF61D03B1DA53DE75CE73 /* VIMediaCache.h */,
+				13372C3B7457E4A2F8D31095798EF170 /* Cache */,
+				9F7E910EDC5B3490924B0569B60F004D /* ResourceLoader */,
+			);
+			name = VIMediaCache;
+			path = VIMediaCache;
+			sourceTree = "<group>";
+		};
 		2B0B187ACC08BE2129D0B97EE82BFBAB /* ISYSSnapStoryViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3EC51AE3FC0BC384682577586B8D661B /* ISYSSnapStoryViewController */,
+				F9215A2BF0C025598D1A8E7907DAEE6F /* ISYSSnapStoryViewController */,
 				5A35EA85918644C6FFA14D344DAD5C89 /* Support Files */,
 			);
 			name = ISYSSnapStoryViewController;
@@ -317,15 +346,8 @@
 				F520CCCE3C388938484546DD7B2682B8 /* RTSpinKitWordPressAnimation.m */,
 				B60E1026BF670E302605AAACBECBDED3 /* Support Files */,
 			);
+			name = SpinKit;
 			path = SpinKit;
-			sourceTree = "<group>";
-		};
-		3EC51AE3FC0BC384682577586B8D661B /* ISYSSnapStoryViewController */ = {
-			isa = PBXGroup;
-			children = (
-				697B86B331B3A76769E54ADE8503E83B /* Classes */,
-			);
-			path = ISYSSnapStoryViewController;
 			sourceTree = "<group>";
 		};
 		5A35EA85918644C6FFA14D344DAD5C89 /* Support Files */ = {
@@ -369,39 +391,6 @@
 			path = "Target Support Files/Pods-ISYSSnapStoryViewController_Tests";
 			sourceTree = "<group>";
 		};
-		680C9B4188705B02623DA20029313651 /* SnapTimer */ = {
-			isa = PBXGroup;
-			children = (
-				3D445597104CF4309033B8698C0BCA28 /* LICENSE.md */,
-				E094B52F7D634BE358729B17B7A4062B /* README.md */,
-				846851B9DB17224571ACA8F36C7B71D9 /* SnapTimer */,
-			);
-			path = SnapTimer;
-			sourceTree = "<group>";
-		};
-		697B86B331B3A76769E54ADE8503E83B /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				8BD609F01EBA25A1009D4EFE /* ISYSPlayerView.h */,
-				8BD609F11EBA25A1009D4EFE /* ISYSPlayerView.m */,
-				EC41785DE07BAF5898CF59B9CA25977D /* ISYSSnapStoryViewController.h */,
-				80CFC96BF0AB429FC364D918A785B37A /* ISYSSnapStoryViewController.m */,
-				680C9B4188705B02623DA20029313651 /* SnapTimer */,
-				7780AED353968A7AC9413A6A3429ABC1 /* VIMediaCache */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		7780AED353968A7AC9413A6A3429ABC1 /* VIMediaCache */ = {
-			isa = PBXGroup;
-			children = (
-				ABCF3BD26CA8C7A2A47872A2F86C521B /* VIMediaCache.h */,
-				81B586A221163C144D0AE578E9E10FB1 /* Cache */,
-				F64C19ECC3C2A7BFCD5BE833017CC46B /* ResourceLoader */,
-			);
-			path = VIMediaCache;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +403,17 @@
 			);
 			sourceTree = "<group>";
 		};
+		7E50913CA849677F68C2EB9CAFE95C18 /* SnapTimer */ = {
+			isa = PBXGroup;
+			children = (
+				477D7CC6F6B8049ED202E5C210349E9C /* LICENSE.md */,
+				AC4011B016A45D0F6C8A364177B78033 /* README.md */,
+				A1792E95FC2B6D6D2C63117576B6E76C /* SnapTimer */,
+			);
+			name = SnapTimer;
+			path = SnapTimer;
+			sourceTree = "<group>";
+		};
 		811C9A7929FA731196CEE67AF7F50234 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,33 +421,6 @@
 				5C9F081B5F501116A5135BE43608480C /* Pods-ISYSSnapStoryViewController_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		81B586A221163C144D0AE578E9E10FB1 /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-				93C1C129A836D8865820299E826283C8 /* VICacheAction.h */,
-				E7A099B57EDCB7228A1D3F683C2E042C /* VICacheAction.m */,
-				D022BAC3E33673309CAE42C73BDF18C6 /* VICacheConfiguration.h */,
-				096AC5DDD2A814C98D4B242A629FF05D /* VICacheConfiguration.m */,
-				8DCEE67D645AEDC6A3F30E6C023BA45D /* VICacheManager.h */,
-				9417B3081317A239E03BFDF9E3A019EE /* VICacheManager.m */,
-				4E2753ACCBDD0EC2F123D8C406303B56 /* VICacheSessionManager.h */,
-				87546CBF7B1A5B5752D90595F907B262 /* VICacheSessionManager.m */,
-				84E51CBEC81C0078A982E220F42277B4 /* VIMediaCacheWorker.h */,
-				DE27EA031A60DF93CFBE1A9424E1A750 /* VIMediaCacheWorker.m */,
-			);
-			path = Cache;
-			sourceTree = "<group>";
-		};
-		846851B9DB17224571ACA8F36C7B71D9 /* SnapTimer */ = {
-			isa = PBXGroup;
-			children = (
-				7731DED9352BB9DFFD04252B83273899 /* SnapTimerBorderLayer.swift */,
-				D9354831CA1B4253509E2B60D1ACD6D1 /* SnapTimerCircleLayer.swift */,
-				A9A3CCBE8F1540104EF6D05A0E5B7CE0 /* SnapTimerView.swift */,
-			);
-			path = SnapTimer;
 			sourceTree = "<group>";
 		};
 		8F9ED7B145EE3B4A9341D05E85E24D57 /* Products */ = {
@@ -459,6 +432,35 @@
 				8C8E0738D83849D97A66FD9E8C63C058 /* SpinKit.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9F7E910EDC5B3490924B0569B60F004D /* ResourceLoader */ = {
+			isa = PBXGroup;
+			children = (
+				7AA93E9724A225917EF2553206E57392 /* VIContentInfo.h */,
+				D4186EDAA20FAD61F65669F4F38D89D4 /* VIContentInfo.m */,
+				BCB7212035E63E096E9EE667AD97B1DD /* VIMediaDownloader.h */,
+				79CF7FE02B9704FED47FFAB34B39A519 /* VIMediaDownloader.m */,
+				BE4E2DA3DB73CE20B22661DAFC076FA4 /* VIResourceLoader.h */,
+				87D1E939C5EE909312400C166FF35519 /* VIResourceLoader.m */,
+				FBBC91CB2E3BE5A41E8A1D3122623330 /* VIResourceLoaderManager.h */,
+				069FACFFFFA73DA2058146FA9742ACF6 /* VIResourceLoaderManager.m */,
+				38AFBBEF53F497DA9398085491543357 /* VIResourceLoadingRequestWorker.h */,
+				DFCC64473E037DD67F1E6DE968065ACA /* VIResourceLoadingRequestWorker.m */,
+			);
+			name = ResourceLoader;
+			path = ResourceLoader;
+			sourceTree = "<group>";
+		};
+		A1792E95FC2B6D6D2C63117576B6E76C /* SnapTimer */ = {
+			isa = PBXGroup;
+			children = (
+				83A670D32170E7CCFC13F6776C17D202 /* SnapTimerBorderLayer.swift */,
+				8DB3D3C74C26D82F9A02D6D51923F83A /* SnapTimerCircleLayer.swift */,
+				5361AFB6876389F816C7A77767DEE74F /* SnapTimerView.swift */,
+			);
+			name = SnapTimer;
+			path = SnapTimer;
 			sourceTree = "<group>";
 		};
 		B60E1026BF670E302605AAACBECBDED3 /* Support Files */ = {
@@ -509,70 +511,76 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		F64C19ECC3C2A7BFCD5BE833017CC46B /* ResourceLoader */ = {
+		D8C267C687AAF9A79FF9C91F18F757E3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D8E1E809FFBD1C278BE5F8A56C658E6D /* VIContentInfo.h */,
-				B800E454E9E07C5C1AE47F449E05D768 /* VIContentInfo.m */,
-				1174218057F269F1BFC40A3EDF4EA944 /* VIMediaDownloader.h */,
-				2658DEBD74E9D9DFF239D8A0AF332C20 /* VIMediaDownloader.m */,
-				26624B261BDC44A7E20C78F37582C8D8 /* VIResourceLoader.h */,
-				DF885068D7DCE2BEAA33147DA57B0EB0 /* VIResourceLoader.m */,
-				7478A2775FA599CA26ABC8DC1BE84460 /* VIResourceLoaderManager.h */,
-				56C7E109ACC2360B147E1A9811512CC7 /* VIResourceLoaderManager.m */,
-				E5656BD53D8B2EF5E43F5F6346B7B3F1 /* VIResourceLoadingRequestWorker.h */,
-				888BA0CF89B0D6C740EE77DB0498D109 /* VIResourceLoadingRequestWorker.m */,
+				9A047C05F7619E88593D280761D9F70B /* ISYSPlayerView.h */,
+				BD60BB5EFC285A23615F08C004A46BEC /* ISYSPlayerView.m */,
+				E6F634C2D57C3FECA445240A88C7410D /* ISYSSnapStoryViewController.h */,
+				324A0B192D4DCEB44CBD5AA661B6D62F /* ISYSSnapStoryViewController.m */,
+				7E50913CA849677F68C2EB9CAFE95C18 /* SnapTimer */,
+				20B465DCB0541CC61D20F48B0FD3D050 /* VIMediaCache */,
 			);
-			path = ResourceLoader;
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F9215A2BF0C025598D1A8E7907DAEE6F /* ISYSSnapStoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D8C267C687AAF9A79FF9C91F18F757E3 /* Classes */,
+			);
+			name = ISYSSnapStoryViewController;
+			path = ISYSSnapStoryViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0A4D7106C4780F7C0F9FE69EE0D594E3 /* Headers */ = {
+		6161214247C58E6B60C82B6B042E20E8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44117434EF079A2A51453DB12F11B699 /* RTSpinKit9CubeGridAnimation.h in Headers */,
-				84B64DEFD94E483D3A3AF179B97A2E74 /* RTSpinKitAnimating.h in Headers */,
-				B2F28CA9176529071EF64693F68AB87D /* RTSpinKitArcAltAnimation.h in Headers */,
-				42A1EF05BD249826B55AFA47B5AD05FB /* RTSpinKitArcAnimation.h in Headers */,
-				AF1071777186A458FF497CCECEF94D93 /* RTSpinKitBounceAnimation.h in Headers */,
-				EF31D51C327391072C2FCB2CA24BD3E2 /* RTSpinKitChasingDotsAnimation.h in Headers */,
-				6C3950D66B2484A8E061ADA2CB7DE3AB /* RTSpinKitCircleAnimation.h in Headers */,
-				A0E15E329D10600CF50081D191168029 /* RTSpinKitCircleFlipAnimation.h in Headers */,
-				B29EE71CFC855BFDB1FC82B7282FA876 /* RTSpinKitFadingCircleAltAnimation.h in Headers */,
-				401771AB9651F04210A5C7CF67687979 /* RTSpinKitFadingCircleAnimation.h in Headers */,
-				5B89F7E9CDEDC1468AEBAD29830FEE6A /* RTSpinKitPlaneAnimation.h in Headers */,
-				A68978B98B5221A8ECBF72C9B77B7BBA /* RTSpinKitPulseAnimation.h in Headers */,
-				2C834C45EE1479B26DD832B1C0A3DAC9 /* RTSpinKitThreeBounceAnimation.h in Headers */,
-				43001530433E4E2D4BFA14DFF6D2798A /* RTSpinKitUtils.h in Headers */,
-				24F13EE71D1FDA88CA7367B76F31C092 /* RTSpinKitView.h in Headers */,
-				EF041C673736CDFF10FA91419AF5E898 /* RTSpinKitWanderingCubesAnimation.h in Headers */,
-				02C98B738466C9CF50919AB7F2AC4194 /* RTSpinKitWaveAnimation.h in Headers */,
-				FD0ED2C1EF6CA6D5DE458BCA670E8452 /* RTSpinKitWordPressAnimation.h in Headers */,
-				8183E9C8940780FF9DB3B3A46EAAE5A0 /* SpinKit-umbrella.h in Headers */,
+				60B0794CFA151BCE801BAD1BDBF9211C /* RTSpinKit9CubeGridAnimation.h in Headers */,
+				940CD95788E833B15DDCB961B18C1707 /* RTSpinKitAnimating.h in Headers */,
+				2067F87350DC05AE7BD23797E92ED4B5 /* RTSpinKitArcAltAnimation.h in Headers */,
+				56A62E342FD66CFFB3B8D41469D38188 /* RTSpinKitArcAnimation.h in Headers */,
+				A495D9D4AC859DCDD7BA5FC11621439E /* RTSpinKitBounceAnimation.h in Headers */,
+				5CAA9522F4827A089F6620D60DA47FFF /* RTSpinKitChasingDotsAnimation.h in Headers */,
+				26BE98623DB11EAB02F749E5503CCAB4 /* RTSpinKitCircleAnimation.h in Headers */,
+				513665EA4D84F026A0B91E7BF89D08FE /* RTSpinKitCircleFlipAnimation.h in Headers */,
+				11132730C3B3FCB911C28A8AA383C667 /* RTSpinKitFadingCircleAltAnimation.h in Headers */,
+				826DBB34526F3E3C2DF9659A9EDB856B /* RTSpinKitFadingCircleAnimation.h in Headers */,
+				5953113864F292DD5AD6459082CD0095 /* RTSpinKitPlaneAnimation.h in Headers */,
+				68CDAD644A49F557502E77E086B90BAD /* RTSpinKitPulseAnimation.h in Headers */,
+				40088B97C4BEB37899A6D71C4032AC14 /* RTSpinKitThreeBounceAnimation.h in Headers */,
+				AE80FD7133177DBD930846C22559AB2A /* RTSpinKitUtils.h in Headers */,
+				D7AE6992D991B006896C5A633AC2DE67 /* RTSpinKitView.h in Headers */,
+				DB873DD6E61128242BBE55FAB9E51491 /* RTSpinKitWanderingCubesAnimation.h in Headers */,
+				AF8754D89624EEB8863C2865C60B27E9 /* RTSpinKitWaveAnimation.h in Headers */,
+				CCEC29F035B77549CC2EAB9BC2A2061A /* RTSpinKitWordPressAnimation.h in Headers */,
+				062CBFFACCF64212401B7309A9595468 /* SpinKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0F909C8C40814087623095E34C44D7DE /* Headers */ = {
+		9F4410534F8C5DC1CB82A8D95569093A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB09C2555EF376EDE1C37B036536D93 /* ISYSSnapStoryViewController-umbrella.h in Headers */,
-				884D1B0E359632B2023028C2E5BC9452 /* ISYSSnapStoryViewController.h in Headers */,
-				1987FE1F92B9C94A68E9F9FA62A93690 /* VICacheAction.h in Headers */,
-				EE7E8DE44B3B2E67E27690DCC1F71439 /* VICacheConfiguration.h in Headers */,
-				A92838C45D4CAB334B688AA7DB11590A /* VICacheManager.h in Headers */,
-				2AD503BC3F1F2F19DD17386CF56773FE /* VICacheSessionManager.h in Headers */,
-				5D089AA5B05DC04088E55E8CA5D40262 /* VIContentInfo.h in Headers */,
-				0765A93DC4AF351E4F89E3A639AC8A5D /* VIMediaCache.h in Headers */,
-				2BE50A31B47785E420350141253AE314 /* VIMediaCacheWorker.h in Headers */,
-				E0337C75DF903F378459B2BB0F7DDF42 /* VIMediaDownloader.h in Headers */,
-				C9DD40F8246743A5A940593F7876D58B /* VIResourceLoader.h in Headers */,
-				9DEB9E661AA8C28CB1994DD434BA82E1 /* VIResourceLoaderManager.h in Headers */,
-				8BD609F21EBA25A1009D4EFE /* ISYSPlayerView.h in Headers */,
-				1B536E849C32F689E5CD35A9DDE7C414 /* VIResourceLoadingRequestWorker.h in Headers */,
+				D510C7C43CBE7DFA3ECD74EB47ADAEA5 /* ISYSPlayerView.h in Headers */,
+				B94B2645E6D96FA1D642A25B473FC704 /* ISYSSnapStoryViewController-umbrella.h in Headers */,
+				7269C0EF6CA4D46C7917AC6DF97E1D95 /* ISYSSnapStoryViewController.h in Headers */,
+				C5352A6BB1E7AEE47AF3924CE372911E /* VICacheAction.h in Headers */,
+				9AA9A442B820A52B3B8DA198C9EA6184 /* VICacheConfiguration.h in Headers */,
+				9ABC2E695142C3AFFE963CF11CBB2802 /* VICacheManager.h in Headers */,
+				F95C206896BA02942B91FFF25844D4B4 /* VICacheSessionManager.h in Headers */,
+				3D76BDCC724BAEA49AE97BFEF4CAEF80 /* VIContentInfo.h in Headers */,
+				E78514FE6BD50B282C4F4A3CF53C95ED /* VIMediaCache.h in Headers */,
+				9E134F104DC527C3475728865418EE20 /* VIMediaCacheWorker.h in Headers */,
+				ACE7793627F250878379AA21CD792BE7 /* VIMediaDownloader.h in Headers */,
+				4C99A2F34B88788376831A83144B98C2 /* VIResourceLoader.h in Headers */,
+				BFE0F03AAD4E7F69274836490F07FA17 /* VIResourceLoaderManager.h in Headers */,
+				B81A84211CF4DFD40C65304714B8BB78 /* VIResourceLoadingRequestWorker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +603,41 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		13D576C8DAF606131CD91EE76F9B4709 /* ISYSSnapStoryViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9854A7D31E603137001EEACFC40406F4 /* Build configuration list for PBXNativeTarget "ISYSSnapStoryViewController" */;
+			buildPhases = (
+				6816581ADB6ADE45E0686E0089471F5D /* Sources */,
+				94B3BBF4D6F57890629FB2120850D53F /* Frameworks */,
+				9F4410534F8C5DC1CB82A8D95569093A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A9945262057AB2F16968ABF46A942CC /* PBXTargetDependency */,
+			);
+			name = ISYSSnapStoryViewController;
+			productName = ISYSSnapStoryViewController;
+			productReference = 332747114D15B8FCF4459858A3B97337 /* ISYSSnapStoryViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		62C4F5690E845B5F9A86CB81A7D471EA /* SpinKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC91BEB549620EEB45C76C1CE0DFB242 /* Build configuration list for PBXNativeTarget "SpinKit" */;
+			buildPhases = (
+				65AC8FE1760AE0B125B80AAFB8FCC3D1 /* Sources */,
+				895659855B01326180ACC7D7A0904FB3 /* Frameworks */,
+				6161214247C58E6B60C82B6B042E20E8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpinKit;
+			productName = SpinKit;
+			productReference = 8C8E0738D83849D97A66FD9E8C63C058 /* SpinKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		8C704F66D313995AB34AE08F799CBF4E /* Pods-ISYSSnapStoryViewController_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7C1297C336F547C9776CDCCEBD8C685 /* Build configuration list for PBXNativeTarget "Pods-ISYSSnapStoryViewController_Example" */;
@@ -614,24 +657,6 @@
 			productReference = 6A8A3F3452066CC00B8C7E0C8DFF8D42 /* Pods_ISYSSnapStoryViewController_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A6141075F19C40567BAD3952F64421EE /* ISYSSnapStoryViewController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B6CAAF5F1A99143FA05364B358D0794C /* Build configuration list for PBXNativeTarget "ISYSSnapStoryViewController" */;
-			buildPhases = (
-				54D438CEBA4F3FD99F1A272D7F877D40 /* Sources */,
-				08C9A1D14A8E4935F389AD2F2345F324 /* Frameworks */,
-				0F909C8C40814087623095E34C44D7DE /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DC0F7DF4ACD4DB3E89A6F2775FF4EAF7 /* PBXTargetDependency */,
-			);
-			name = ISYSSnapStoryViewController;
-			productName = ISYSSnapStoryViewController;
-			productReference = 332747114D15B8FCF4459858A3B97337 /* ISYSSnapStoryViewController.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		A8B6E6FB81CD4D497FC005CE6736B05D /* Pods-ISYSSnapStoryViewController_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80060BE9516CB80E323F9FDE9D6DE81F /* Build configuration list for PBXNativeTarget "Pods-ISYSSnapStoryViewController_Tests" */;
@@ -647,23 +672,6 @@
 			name = "Pods-ISYSSnapStoryViewController_Tests";
 			productName = "Pods-ISYSSnapStoryViewController_Tests";
 			productReference = 0659173FA80B72B34983A6A56CADCBE9 /* Pods_ISYSSnapStoryViewController_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		FB821D703F85F2F049CF89E681ED1CEF /* SpinKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3F82A9AF165F44C32E0DC25328A91521 /* Build configuration list for PBXNativeTarget "SpinKit" */;
-			buildPhases = (
-				ECB928447BCC1927092480C3D52A99B4 /* Sources */,
-				F1DBA4A55550E478A237E00E27F79A5D /* Frameworks */,
-				0A4D7106C4780F7C0F9FE69EE0D594E3 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SpinKit;
-			productName = SpinKit;
-			productReference = 8C8E0738D83849D97A66FD9E8C63C058 /* SpinKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -687,10 +695,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A6141075F19C40567BAD3952F64421EE /* ISYSSnapStoryViewController */,
+				13D576C8DAF606131CD91EE76F9B4709 /* ISYSSnapStoryViewController */,
 				8C704F66D313995AB34AE08F799CBF4E /* Pods-ISYSSnapStoryViewController_Example */,
 				A8B6E6FB81CD4D497FC005CE6736B05D /* Pods-ISYSSnapStoryViewController_Tests */,
-				FB821D703F85F2F049CF89E681ED1CEF /* SpinKit */,
+				62C4F5690E845B5F9A86CB81A7D471EA /* SpinKit */,
 			);
 		};
 /* End PBXProject section */
@@ -704,28 +712,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54D438CEBA4F3FD99F1A272D7F877D40 /* Sources */ = {
+		65AC8FE1760AE0B125B80AAFB8FCC3D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE09D666B506F69F7FEE3780AB0665F5 /* ISYSSnapStoryViewController-dummy.m in Sources */,
-				BD499E83E51D33CCA3B595D94DFC3EB9 /* ISYSSnapStoryViewController.m in Sources */,
-				45AF9DE33771411BB37A73B70CE9AAE5 /* LICENSE.md in Sources */,
-				E589CAE5E5328525C0F0FA45CC7A30D3 /* README.md in Sources */,
-				17B01E11498EEE7315D27BA236767455 /* SnapTimerBorderLayer.swift in Sources */,
-				1F2ADAAE7FA3CB58DF2D88DCCC3DC74A /* SnapTimerCircleLayer.swift in Sources */,
-				301F044F4F29B047B2836D862369ABE3 /* SnapTimerView.swift in Sources */,
-				8BD609F31EBA25A1009D4EFE /* ISYSPlayerView.m in Sources */,
-				88C36CE6033350ABD12E64D67D14CBD2 /* VICacheAction.m in Sources */,
-				59025D2AEE9084F199843C36F728B66A /* VICacheConfiguration.m in Sources */,
-				2D88F62CBA620526E36FDA9494249C4E /* VICacheManager.m in Sources */,
-				80F1ABDF45F9A23ADF1659FC8F16A070 /* VICacheSessionManager.m in Sources */,
-				3814A359EDCA245D321D6B274DF08F82 /* VIContentInfo.m in Sources */,
-				C45C13D76E7AF69A642D90A2D48725DB /* VIMediaCacheWorker.m in Sources */,
-				240E29F598E756AD514D972875393E42 /* VIMediaDownloader.m in Sources */,
-				3B068EA44E1D2C5852587AB361C91EB5 /* VIResourceLoader.m in Sources */,
-				7FBC5CAA942D7587CD397D46F59BEBF3 /* VIResourceLoaderManager.m in Sources */,
-				FCEDA12F2551F474565B9C30F4C3A905 /* VIResourceLoadingRequestWorker.m in Sources */,
+				399DF72B047AFAE87A74B1D741B70F6C /* RTSpinKit9CubeGridAnimation.m in Sources */,
+				FB3AF1FD50ED5002E79AAD3A1C84718C /* RTSpinKitArcAltAnimation.m in Sources */,
+				70268F6E982D9D8194D09720A0FB8703 /* RTSpinKitArcAnimation.m in Sources */,
+				CFA03A8EBDDCD58BAB75BB39967995DB /* RTSpinKitBounceAnimation.m in Sources */,
+				D6D480B5CD187D914364FBBB918ECE88 /* RTSpinKitChasingDotsAnimation.m in Sources */,
+				9F5CA14F0D6D604F993B485FBF75D2D3 /* RTSpinKitCircleAnimation.m in Sources */,
+				006EE60D2DB67A08B68AB8DFE19DC21A /* RTSpinKitCircleFlipAnimation.m in Sources */,
+				9E195E91DB1145B62B8EC4594DFF1A7A /* RTSpinKitFadingCircleAltAnimation.m in Sources */,
+				1A07F25F2FC9535C958C67B6A054E281 /* RTSpinKitFadingCircleAnimation.m in Sources */,
+				8EE55C731DB43DB8895DC92CC435A3C0 /* RTSpinKitPlaneAnimation.m in Sources */,
+				C6AEBAEA97926C44B84A89B0A607558D /* RTSpinKitPulseAnimation.m in Sources */,
+				859083077F65D905142A4DCD90EE0D60 /* RTSpinKitThreeBounceAnimation.m in Sources */,
+				FED47F0C47FF93711053C0807BDBD82B /* RTSpinKitUtils.m in Sources */,
+				76E88B02C94868A57A4B9BF11BF8C88D /* RTSpinKitView.m in Sources */,
+				EF2B0703E367F47AA8A68968102DC5C6 /* RTSpinKitWanderingCubesAnimation.m in Sources */,
+				76C4C8FCD4FD7AFADDB6212081D759A9 /* RTSpinKitWaveAnimation.m in Sources */,
+				BC5A22810EAB36B1C18917BDF0FC4317 /* RTSpinKitWordPressAnimation.m in Sources */,
+				D47BA580D0D8C74C1A0B20588D2F0D15 /* SpinKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6816581ADB6ADE45E0686E0089471F5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47064944313BEE433778DBA0409181EF /* ISYSPlayerView.m in Sources */,
+				DB58BA96D147DD95F60F2009C106E9BB /* ISYSSnapStoryViewController-dummy.m in Sources */,
+				A28FA7EB35FD1AC04D733807C970C439 /* ISYSSnapStoryViewController.m in Sources */,
+				5F71BBEE8E034D968B927D82C246520F /* LICENSE.md in Sources */,
+				D4DA98B6DAE788B01F3286124F5D8962 /* README.md in Sources */,
+				343A733F34FB141123143D0F2CB72375 /* SnapTimerBorderLayer.swift in Sources */,
+				3FE57132E5CA3AA422888536FCED896A /* SnapTimerCircleLayer.swift in Sources */,
+				5D2ADA32AAC033FE2865A2541C69D717 /* SnapTimerView.swift in Sources */,
+				F982C31AFC6E1A253A5635A02AB59791 /* VICacheAction.m in Sources */,
+				89E1FF417E8F7A7C055E65AFB2C5FF58 /* VICacheConfiguration.m in Sources */,
+				4A62F05BD033E4738BF54680CB2A6284 /* VICacheManager.m in Sources */,
+				095A09AC6081618AECE3511396A8A8A9 /* VICacheSessionManager.m in Sources */,
+				590170C035E128A4FF6827EE6404F9DE /* VIContentInfo.m in Sources */,
+				9CEFADC4DE6B615A83E8570792E9B208 /* VIMediaCacheWorker.m in Sources */,
+				4CC305CA8917BA0C6FA3FEA47E7638DE /* VIMediaDownloader.m in Sources */,
+				164B796BB0D64691571BE3DEEF2F9BFD /* VIResourceLoader.m in Sources */,
+				5435B27554E8ED4FDD361C8CBDBDD284 /* VIResourceLoaderManager.m in Sources */,
+				CF993FFD9100BA8261291E92FD5CADFE /* VIResourceLoadingRequestWorker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,89 +770,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECB928447BCC1927092480C3D52A99B4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E348DCDD5E2D6FC862562364EA914C4 /* RTSpinKit9CubeGridAnimation.m in Sources */,
-				73EA71C3C0D8482369E9E93C3BFC2DF6 /* RTSpinKitArcAltAnimation.m in Sources */,
-				6B70EAF35B97A7BABD5A5741A08089CF /* RTSpinKitArcAnimation.m in Sources */,
-				E753853F90C0454234CAA1363A8A3ECF /* RTSpinKitBounceAnimation.m in Sources */,
-				74B468E7A0C418D403E75B2918441457 /* RTSpinKitChasingDotsAnimation.m in Sources */,
-				8E1B7AEB94630E618450F3026EA0E521 /* RTSpinKitCircleAnimation.m in Sources */,
-				201181E162106CF7B3071D04D2F7266C /* RTSpinKitCircleFlipAnimation.m in Sources */,
-				11DAEEDDA85DB82012AF72AE53E0B013 /* RTSpinKitFadingCircleAltAnimation.m in Sources */,
-				AB64BA95846195F6543C858253BC9B25 /* RTSpinKitFadingCircleAnimation.m in Sources */,
-				DBD4B263DEAEE4E3542051E98FA8D15D /* RTSpinKitPlaneAnimation.m in Sources */,
-				2E5116196BA3F7BEF107F4249257D777 /* RTSpinKitPulseAnimation.m in Sources */,
-				2660DCB34300FE55AD39860A5A1BE398 /* RTSpinKitThreeBounceAnimation.m in Sources */,
-				ABF84673A505F7D2C94E41F5DEE229DE /* RTSpinKitUtils.m in Sources */,
-				D93B5A56EEFC06AB0DB540CC1B6713D5 /* RTSpinKitView.m in Sources */,
-				17EF6F76EA5CDE0E2E1B566A9035A435 /* RTSpinKitWanderingCubesAnimation.m in Sources */,
-				65A42FDDF192ACAD005BDABC5A8A2198 /* RTSpinKitWaveAnimation.m in Sources */,
-				F50E24A67AB3CB621A64738435BA6481 /* RTSpinKitWordPressAnimation.m in Sources */,
-				F3172E8D35C6EBD4D5B0D93D77ADDEBA /* SpinKit-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		2960BF6B5E5C37147167CED8B5FA3F7E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ISYSSnapStoryViewController;
-			target = A6141075F19C40567BAD3952F64421EE /* ISYSSnapStoryViewController */;
+			target = 13D576C8DAF606131CD91EE76F9B4709 /* ISYSSnapStoryViewController */;
 			targetProxy = 037C74C493E99457E0E22DAB1AC3C5F9 /* PBXContainerItemProxy */;
+		};
+		9A9945262057AB2F16968ABF46A942CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SpinKit;
+			target = 62C4F5690E845B5F9A86CB81A7D471EA /* SpinKit */;
+			targetProxy = 8D6226F436D73DF5D6410F717A42CD70 /* PBXContainerItemProxy */;
 		};
 		B6BBA935B0BFF5A77921DD30EA2C7A64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SpinKit;
-			target = FB821D703F85F2F049CF89E681ED1CEF /* SpinKit */;
+			target = 62C4F5690E845B5F9A86CB81A7D471EA /* SpinKit */;
 			targetProxy = 91198423FC4CA06D7ADB49E5CA741531 /* PBXContainerItemProxy */;
-		};
-		DC0F7DF4ACD4DB3E89A6F2775FF4EAF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SpinKit;
-			target = FB821D703F85F2F049CF89E681ED1CEF /* SpinKit */;
-			targetProxy = D62FD798D2A9FD7CFA758A2FC3CEB6EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		12C660A06C696C653F81CA428569F761 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28E7432D143D1DED627780AD5D68145E /* ISYSSnapStoryViewController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ISYSSnapStoryViewController/ISYSSnapStoryViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ISYSSnapStoryViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ISYSSnapStoryViewController/ISYSSnapStoryViewController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ISYSSnapStoryViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		16419F8A8CD6AA721E4E41A2D849DABF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB4A9FF9E203239E6A0AC9E4E2C8D58E /* Pods-ISYSSnapStoryViewController_Example.debug.xcconfig */;
@@ -859,38 +833,6 @@
 			};
 			name = Debug;
 		};
-		2293A8CF4C235313B723E3286EFB6FB7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0EEAB56F0465633CC15AF89BF2DF07A /* SpinKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SpinKit/SpinKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SpinKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SpinKit/SpinKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SpinKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		2F799C8792A9F878BBE4965FB067D0C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E08DEE6318969D6A7B087C74F3122F2 /* Pods-ISYSSnapStoryViewController_Example.release.xcconfig */;
@@ -928,41 +870,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		4D868487C44F8E69A602E7EF4F46493D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28E7432D143D1DED627780AD5D68145E /* ISYSSnapStoryViewController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ISYSSnapStoryViewController/ISYSSnapStoryViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ISYSSnapStoryViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ISYSSnapStoryViewController/ISYSSnapStoryViewController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ISYSSnapStoryViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1009,6 +916,41 @@
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8008CAE548CE39C46B9FF795361F37D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28E7432D143D1DED627780AD5D68145E /* ISYSSnapStoryViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ISYSSnapStoryViewController/ISYSSnapStoryViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ISYSSnapStoryViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ISYSSnapStoryViewController/ISYSSnapStoryViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ISYSSnapStoryViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1084,6 +1026,40 @@
 			};
 			name = Debug;
 		};
+		ADB37869EFDA5A1D624DF0986ABFD03F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28E7432D143D1DED627780AD5D68145E /* ISYSSnapStoryViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ISYSSnapStoryViewController/ISYSSnapStoryViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ISYSSnapStoryViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ISYSSnapStoryViewController/ISYSSnapStoryViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ISYSSnapStoryViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1128,7 +1104,7 @@
 			};
 			name = Release;
 		};
-		D47EF7B83633AA53EF7D8D96BEBDD1B7 /* Debug */ = {
+		D0198A10D115A1F76346D0854CAADF16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0EEAB56F0465633CC15AF89BF2DF07A /* SpinKit.xcconfig */;
 			buildSettings = {
@@ -1160,6 +1136,38 @@
 			};
 			name = Debug;
 		};
+		DA7AE14DC867E1ADD3B3E1D69DB597AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0EEAB56F0465633CC15AF89BF2DF07A /* SpinKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SpinKit/SpinKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SpinKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SpinKit/SpinKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SpinKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1168,15 +1176,6 @@
 			buildConfigurations = (
 				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
 				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3F82A9AF165F44C32E0DC25328A91521 /* Build configuration list for PBXNativeTarget "SpinKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D47EF7B83633AA53EF7D8D96BEBDD1B7 /* Debug */,
-				2293A8CF4C235313B723E3286EFB6FB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1190,11 +1189,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B6CAAF5F1A99143FA05364B358D0794C /* Build configuration list for PBXNativeTarget "ISYSSnapStoryViewController" */ = {
+		9854A7D31E603137001EEACFC40406F4 /* Build configuration list for PBXNativeTarget "ISYSSnapStoryViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D868487C44F8E69A602E7EF4F46493D /* Debug */,
-				12C660A06C696C653F81CA428569F761 /* Release */,
+				8008CAE548CE39C46B9FF795361F37D5 /* Debug */,
+				ADB37869EFDA5A1D624DF0986ABFD03F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC91BEB549620EEB45C76C1CE0DFB242 /* Build configuration list for PBXNativeTarget "SpinKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0198A10D115A1F76346D0854CAADF16 /* Debug */,
+				DA7AE14DC867E1ADD3B3E1D69DB597AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

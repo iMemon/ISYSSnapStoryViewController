@@ -13,6 +13,8 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <ISYSSnapStoryViewController/ISYSSnapStoryViewController-Swift.h>
 
+#import "ISYSPlayerView.h"
+
 //static MZDownloadManager *sharedDownloadManager;
 
 @interface ISYSSnapStoryViewController ()
@@ -27,11 +29,12 @@
 @property (nonatomic, strong) id playerTimeObserver;
 
 @property (nonatomic, strong) AVPlayer* player;
+@property (nonatomic, strong) ISYSPlayerView * playerView;
 @property (nonatomic, strong) AVPlayer* nextPlayer;
 @property (nonatomic, strong) AVPlayer* prevPlayer;
-@property (nonatomic, strong) AVPlayerLayer* playerLayer;
-@property (nonatomic, strong) AVPlayerLayer* nextPlayerLayer;
-@property (nonatomic, strong) AVPlayerLayer* prevPlayerLayer;
+//@property (nonatomic, strong) AVPlayerLayer* playerLayer;
+//@property (nonatomic, strong) AVPlayerLayer* nextPlayerLayer;
+//@property (nonatomic, strong) AVPlayerLayer* prevPlayerLayer;
 
 @property (nonatomic, strong) SnapTimerView * timerView;
 @property (nonatomic, weak) RTSpinKitView *spinner;
@@ -77,12 +80,13 @@
         [self.view addSubview:spinner];
         spinner.center = self.view.center;
         self.spinner = spinner;
+        self.spinner.hidden = YES;
     }
     return _spinner;
 }
 -(void)setIsLoading:(BOOL)isLoading{
     _isLoading = isLoading;
-    [self.spinner setHidden:!isLoading];
+//    [self.spinner setHidden:!isLoading];
     if (isLoading) {
         [self updateProgress:0.0 animated:NO];
     }
@@ -115,7 +119,6 @@
     if (index>=0 && index<_videoUrls.count) {
         return _playerItems[index];
     } else {
-        // TODO: Create playerItem
     }
     return nil;
 }
@@ -144,7 +147,7 @@
     }
 }
 - (void)updateProgress:(float)currentProgress animated:(BOOL)animated {
-    CGFloat innerVal = (self.currentItemIndex==self.videoUrls.count-1) ? 100.0 : (((CGFloat)self.currentItemIndex/self.videoUrls.count)*100.0);
+    CGFloat innerVal = (self.currentItemIndex==self.videoUrls.count+1) ? 100.0 : (((CGFloat)self.currentItemIndex+currentProgress)/(self.videoUrls.count-1))*100.0;
     CGFloat outerVal = (currentProgress*100.0);
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.timerView animateInnerValue:innerVal];
@@ -167,13 +170,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    ISYSPlayerView * playerView = [[ISYSPlayerView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:playerView];
+    self.playerView = playerView;
+    
     [self createPlayerItems];
     [self createPlayer];
     [self playCurrentVideo];
 }
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    self.playerLayer.frame = self.view.layer.bounds;
+//    self.playerLayer.frame = self.view.layer.bounds;
+    self.playerView.frame = self.view.layer.bounds;
+    self.playerView.layer.frame = self.view.layer.bounds;
     self.timerView.frame = CGRectMake(self.view.layer.bounds.size.width-40.0, 20.0, 20.0, 20.0);
     self.spinner.center = self.view.center;
 }
@@ -195,14 +204,16 @@
     
     [self releasePlayerItemKVOs:self.player.currentItem];
     
-    [self.playerLayer removeFromSuperlayer];
+//    [self.playerLayer removeFromSuperlayer];
     
     [self.player removeTimeObserver:self.playerTimeObserver];
     self.playerTimeObserver = nil;
     self.player = nil;
     [self.playerItems removeAllObjects];
     self.playerItems = nil;
-    self.playerLayer = nil;
+//    self.playerLayer = nil;
+    [self.playerView removeFromSuperview];
+    self.playerView = nil;
     
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
@@ -222,16 +233,14 @@
     // Create playerItems
     for (NSURL * url in self.videoUrls) {
 //        NSString * fileName = [self cachedFileNameForKey:url.absoluteString];
-        // TODO: If item exists locally then create player item
         
-//        AVPlayerItem *item = [self.resourceLoaderManager playerItemWithURL:url];
-        AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
+        AVPlayerItem *item = [self.resourceLoaderManager playerItemWithURL:url];
+//        AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
         [self.playerItems addObject:item];
-//        VICacheConfiguration *configuration = [VICacheManager cacheConfigurationForURL:url];
-//        if (configuration.progress >= 1.0) {
-//            NSLog(@"cache completed");
-//        }
-        
+        VICacheConfiguration *configuration = [VICacheManager cacheConfigurationForURL:url];
+        if (configuration.progress >= 1.0) {
+            NSLog(@"cache completed");
+        }
 //        [[[self class] sharedDownloadManager] addDownloadTask:fileName fileURL:url.absoluteString];
     }
     
@@ -260,12 +269,21 @@
     if (self.videoUrls.count > 0) {
         // Create player
         self.player = [AVPlayer playerWithPlayerItem:self.playerItems[self.currentItemIndex]];
+        if ([self.player respondsToSelector:@selector(setAutomaticallyWaitsToMinimizeStalling:)]) {
+            self.player.automaticallyWaitsToMinimizeStalling = YES;
+        }
 //        AVPlayerItem * testItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/OTskm12IalYJ42tTU8LQudIzYeF3%2Fmessage_reaction_video_-Ki4CrJxC7JsHR1Cs_a7%2F1492588684179.mp4?alt=media&token=e282e01b-d099-41c4-a165-cbf78e108a7d"]];
 //        self.player = [AVPlayer playerWithPlayerItem:testItem];
         [self.player setVolume:1.0f];
         
+        // Add playerLayer to view
+        [self.playerView setPlayer:self.player];
+//        self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
+//        self.playerLayer.player = self.player;
+//        [self.view.layer addSublayer:self.playerLayer];
+        
         // Listen for PlayerItem Progress notification
-        self.playerTimeObserver = [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, 10)
+        self.playerTimeObserver = [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, 3)
                                                   queue:dispatch_queue_create("player.time.queue", NULL)
                                              usingBlock:^(CMTime time)
          {
@@ -277,11 +295,6 @@
              [weakSelf updateProgress:currentProgress animated:YES];
          }];
         
-        // Add playerLayer to view
-        self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
-        self.playerLayer.player = self.player;
-        [self.view.layer addSublayer:self.playerLayer];
-        
         // Add TapGesture
         [self.view addGestureRecognizer:self.tapGesture];
         [self.view addSubview:self.timerView];
@@ -290,14 +303,11 @@
 #pragma mark - Private Fuctions - Play
 - (void)playCurrentVideo {
     if (self.videoUrls.count > 0) {
-        AVPlayerItem * currentItem = [self playerItemAtIndex:self.currentItemIndex];
+        AVPlayerItem * newItemToPlay = [self playerItemAtIndex:self.currentItemIndex];
         
-        if (currentItem.status != AVPlayerStatusReadyToPlay) {
-            self.isLoading = true;
-        }
-        [self registerPlayerItemKVOs:currentItem];
+        [self registerPlayerItemKVOs:newItemToPlay];
         
-        [self.player replaceCurrentItemWithPlayerItem:currentItem];
+        [self.player replaceCurrentItemWithPlayerItem:newItemToPlay];
         [self.player.currentItem seekToTime:CMTimeMakeWithSeconds(0.001, 10000)];
         [self.player play];
     }
@@ -305,7 +315,8 @@
 - (void)loadNextVideo {
     if (self.currentItemIndex+1 < self.videoUrls.count) {
         [self releasePlayerItemKVOs:self.player.currentItem];
-        self.currentItemIndex++;
+        [self.resourceLoaderManager cancelLoaders];
+        self.currentItemIndex+=1;
     } else {
         // Repeat currently playing item
     }
@@ -315,7 +326,8 @@
         // Repeat currently playing item
     } else {
         [self releasePlayerItemKVOs:self.player.currentItem];
-        self.currentItemIndex--;
+        [self.resourceLoaderManager cancelLoaders];
+        self.currentItemIndex-=1;
     }
 }
 - (void)playNextVideo {
@@ -332,31 +344,31 @@
 #pragma mark - KVO Notifications
 - (void)registerPlayerItemKVOs:(AVPlayerItem *)playerItem {
     NSKeyValueObservingOptions options = NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew;
-    [playerItem addObserver:self
-                 forKeyPath:@"playbackBufferEmpty"
-                    options:options
-                    context:nil];
-    
-    [playerItem addObserver:self
-                 forKeyPath:@"playbackLikelyToKeepUp"
-                    options:options
-                    context:nil];
+//    [playerItem addObserver:self
+//                 forKeyPath:@"playbackBufferEmpty"
+//                    options:options
+//                    context:nil];
+//    
+//    [playerItem addObserver:self
+//                 forKeyPath:@"playbackLikelyToKeepUp"
+//                    options:options
+//                    context:nil];
     
 //    [playerItem addObserver:self
 //                 forKeyPath:@"playbackBufferFull"
 //                    options:options
 //                    context:nil];
 //    
-//    [playerItem addObserver:self
-//                 forKeyPath:@"status"
-//                    options:options
-//                    context:nil];
+    [playerItem addObserver:self
+                 forKeyPath:@"status"
+                    options:options
+                    context:nil];
 }
 - (void)releasePlayerItemKVOs:(AVPlayerItem *)playerItem {
-    [playerItem removeObserver:self forKeyPath:@"playbackBufferEmpty"];
-    [playerItem removeObserver:self forKeyPath:@"playbackLikelyToKeepUp"];
+//    [playerItem removeObserver:self forKeyPath:@"playbackBufferEmpty"];
+//    [playerItem removeObserver:self forKeyPath:@"playbackLikelyToKeepUp"];
 //    [playerItem removeObserver:self forKeyPath:@"playbackBufferFull"];
-//    [playerItem removeObserver:self forKeyPath:@"status"];
+    [playerItem removeObserver:self forKeyPath:@"status"];
 //    [playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
 //    [playerItem removeObserver:self forKeyPath:@"currentTime"];
 }
@@ -379,12 +391,26 @@
     
     if ([object isKindOfClass:[AVPlayerItem class]]) {
         
-        if ([keyPath isEqualToString:@"playbackBufferEmpty"]) {
-            self.isLoading = true;
-        }
+//        if ([keyPath isEqualToString:@"playbackBufferEmpty"]) {
+//            self.isLoading = true;
+//        }
+//        
+//        if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {
+//            self.isLoading = false;
+//        }
         
-        if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {
-            self.isLoading = false;
+        AVPlayerItem * currentItem = self.playerItems[self.currentItemIndex];
+        if (object == currentItem && [keyPath isEqualToString:@"status"]) {
+            NSLog(@"player status %@, rate %@, error: %@", @(currentItem.status), @(self.player.rate), currentItem.error);
+            if (currentItem.status == AVPlayerItemStatusReadyToPlay) {
+//                dispatch_async(dispatch_get_main_queue(), ^(void) {
+//                    CGFloat duration = CMTimeGetSeconds(currentItem.duration);
+//                    self.totalTimeLabel.text = [NSString stringWithFormat:@"%.f", duration];
+//                });
+            } else if (currentItem.status == AVPlayerItemStatusFailed) {
+                // something went wrong. player.error should contain some information
+                NSLog(@"player error %@", currentItem.error);
+            }
         }
         
 //        if ([keyPath isEqualToString:@"status"]) {
@@ -427,7 +453,6 @@
 //}
 //- (void)downloadRequestFinished:(MZDownloadModel *)downloadModel index:(NSInteger)index {
 //    NSLog(@"Download Finished");
-//    // TODO: File downloaded. Create playerItem & and to array (if needed)
 //}
 //- (void)downloadRequestDidPopulatedInterruptedTasks:(NSArray<MZDownloadModel *> *)downloadModels {
 //    NSLog(@"InterruptedTasks delegate");

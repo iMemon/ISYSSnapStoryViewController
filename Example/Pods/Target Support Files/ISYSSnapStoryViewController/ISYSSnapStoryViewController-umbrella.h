@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "ISYSPlayerView.h"
 #import "ISYSSnapStoryViewController.h"
 #import "VICacheAction.h"
 #import "VICacheConfiguration.h"
