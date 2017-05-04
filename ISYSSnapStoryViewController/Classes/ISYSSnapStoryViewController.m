@@ -10,7 +10,7 @@
 #import "ISYSSnapStoryViewController.h"
 #import "VIMediaCache.h"
 #import <SpinKit/RTSpinKitView.h>
-#import <CommonCrypto/CommonDigest.h>
+//#import <CommonCrypto/CommonDigest.h>
 #import <ISYSSnapStoryViewController/ISYSSnapStoryViewController-Swift.h>
 
 #import "ISYSPlayerView.h"
@@ -86,10 +86,12 @@
 }
 -(void)setIsLoading:(BOOL)isLoading{
     _isLoading = isLoading;
-//    [self.spinner setHidden:!isLoading];
-    if (isLoading) {
-        [self updateProgress:0.0 animated:NO];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.spinner setHidden:!isLoading];
+        if (isLoading) {
+            [self updateProgress:0.0 animated:NO];
+        }
+    });
 }
 - (UITapGestureRecognizer *)tapGesture {
     if (!_tapGesture) {
@@ -309,6 +311,9 @@
         
         [self.player replaceCurrentItemWithPlayerItem:newItemToPlay];
         [self.player.currentItem seekToTime:CMTimeMakeWithSeconds(0.001, 10000)];
+        if (self.player.currentItem.status != AVPlayerStatusReadyToPlay) {
+            self.isLoading = YES;
+        }
         [self.player play];
     }
 }
@@ -326,7 +331,7 @@
         // Repeat currently playing item
     } else {
         [self releasePlayerItemKVOs:self.player.currentItem];
-        [self.resourceLoaderManager cancelLoaders];
+//        [self.resourceLoaderManager cancelLoaders];
         self.currentItemIndex-=1;
     }
 }
@@ -400,16 +405,18 @@
 //        }
         
         AVPlayerItem * currentItem = self.playerItems[self.currentItemIndex];
+        __weak typeof(self) weakSelf = self;
         if (object == currentItem && [keyPath isEqualToString:@"status"]) {
             NSLog(@"player status %@, rate %@, error: %@", @(currentItem.status), @(self.player.rate), currentItem.error);
             if (currentItem.status == AVPlayerItemStatusReadyToPlay) {
-//                dispatch_async(dispatch_get_main_queue(), ^(void) {
-//                    CGFloat duration = CMTimeGetSeconds(currentItem.duration);
-//                    self.totalTimeLabel.text = [NSString stringWithFormat:@"%.f", duration];
-//                });
+                dispatch_async(dispatch_get_main_queue(), ^(void) {
+                    weakSelf.isLoading = NO;
+                });
             } else if (currentItem.status == AVPlayerItemStatusFailed) {
                 // something went wrong. player.error should contain some information
                 NSLog(@"player error %@", currentItem.error);
+            } else {
+                weakSelf.isLoading = YES;
             }
         }
         
