@@ -24,15 +24,35 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)onPresent:(id)sender {
+- (IBAction)onDelete:(id)sender {
     NSArray * videoUrls = @[
-                            [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/YV5SmaZbwrUf5aqeVNuZnpJM5oJ3%2Fmessage_reaction_video_-Ki5r70BP8mdi7PQmB7T%2F1492616271961.mp4?alt=media&token=b9c3de52-eabd-411d-9e7b-c6a9543c7cfc"],
+                            
+                            [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/OTskm12IalYJ42tTU8LQudIzYeF3%2Fmessage_reaction_video_-Ki4CrJxC7JsHR1Cs_a7%2F1492588684179.mp4?alt=media&token=e282e01b-d099-41c4-a165-cbf78e108a7d"],
                             
                             [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/lGFngFbsOHhAHMygEUuER3qIoR93%2Fmessage_reaction_video_-Ki5wNs-NqkOS--pf7At%2F1492617646099.mp4?alt=media&token=1b23ecf5-2adc-4bdf-9368-7993da66c016"],
                             
                             [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/i6InVOQyBZdSwCcG18EdFDrBSmL2%2Fmessage_reaction_video_-Ki5xKuoy9nkt2NTpl2N%2F1492617915148.mp4?alt=media&token=2d731894-f821-462d-991d-fb5cd05e1f83"],
                             
-                            [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/OTskm12IalYJ42tTU8LQudIzYeF3%2Fmessage_reaction_video_-Ki4CrJxC7JsHR1Cs_a7%2F1492588684179.mp4?alt=media&token=e282e01b-d099-41c4-a165-cbf78e108a7d"]
+                            [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/YV5SmaZbwrUf5aqeVNuZnpJM5oJ3%2Fmessage_reaction_video_-Ki5r70BP8mdi7PQmB7T%2F1492616271961.mp4?alt=media&token=b9c3de52-eabd-411d-9e7b-c6a9543c7cfc"],
+                            ];
+    for (NSURL * url in videoUrls) {
+        NSString * urlString = url.absoluteString;
+        NSString * fileName = [ISYSSnapStoryViewController cachedFileNameForKey:[urlString componentsSeparatedByString:@"?"][0]];
+        [[TWRDownloadManager sharedManager] deleteFileWithName:fileName];
+    }
+    
+}
+- (IBAction)onPresent:(id)sender {
+    NSArray * videoUrls = @[
+                            
+                            [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/OTskm12IalYJ42tTU8LQudIzYeF3%2Fmessage_reaction_video_-Ki4CrJxC7JsHR1Cs_a7%2F1492588684179.mp4?alt=media&token=e282e01b-d099-41c4-a165-cbf78e108a7d"],
+                            
+                            [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/lGFngFbsOHhAHMygEUuER3qIoR93%2Fmessage_reaction_video_-Ki5wNs-NqkOS--pf7At%2F1492617646099.mp4?alt=media&token=1b23ecf5-2adc-4bdf-9368-7993da66c016"],
+                            
+                            [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/YV5SmaZbwrUf5aqeVNuZnpJM5oJ3%2Fmessage_reaction_video_-Ki5r70BP8mdi7PQmB7T%2F1492616271961.mp4?alt=media&token=b9c3de52-eabd-411d-9e7b-c6a9543c7cfc"],
+                            
+                            [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/i6InVOQyBZdSwCcG18EdFDrBSmL2%2Fmessage_reaction_video_-Ki5xKuoy9nkt2NTpl2N%2F1492617915148.mp4?alt=media&token=2d731894-f821-462d-991d-fb5cd05e1f83"],
+                            
                             ];
     
     [ISYSSnapStoryViewController addNewDownload:videoUrls[0] completion:^(BOOL completed, AVPlayerItem *playerItem) {

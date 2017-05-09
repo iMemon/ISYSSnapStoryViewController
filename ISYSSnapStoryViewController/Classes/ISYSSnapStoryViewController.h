@@ -22,5 +22,6 @@
 
 #pragma mark - Download Manager Methods
 + (AVPlayerItem *)addNewDownload:(NSURL *)url completion:(void(^)(BOOL completed, AVPlayerItem * playerItem))completionBlock;
++ (nullable NSString *)cachedFileNameForKey:(nullable NSString *)key;
 
 @end
