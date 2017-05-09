@@ -22,7 +22,7 @@
 /// Array of urls which will be played
 @property (nonatomic, strong) NSArray* videoUrls;
 
-@property (nonatomic, strong) VIResourceLoaderManager *resourceLoaderManager;
+//@property (nonatomic, strong) VIResourceLoaderManager *resourceLoaderManager;
 
 @property (nonatomic, strong) UITapGestureRecognizer* tapGesture;
 
@@ -61,12 +61,12 @@
 //    });
 //    return sharedDownloadManager;
 //}
-- (VIResourceLoaderManager *)resourceLoaderManager {
-    if (!_resourceLoaderManager) {
-        _resourceLoaderManager = [VIResourceLoaderManager new];
-    }
-    return _resourceLoaderManager;
-}
+//- (VIResourceLoaderManager *)resourceLoaderManager {
+//    if (!_resourceLoaderManager) {
+//        _resourceLoaderManager = [VIResourceLoaderManager new];
+//    }
+//    return _resourceLoaderManager;
+//}
 - (SnapTimerView *)timerView {
     if (!_timerView) {
         _timerView = [[SnapTimerView alloc] initWithFrame:CGRectMake(20.0, 20.0, 30.0, 30.0)];
@@ -211,6 +211,7 @@
     [self.player removeTimeObserver:self.playerTimeObserver];
     self.playerTimeObserver = nil;
     self.player = nil;
+    [self releasePlayerItemKVOs:self.player.currentItem];
     [self.playerItems removeAllObjects];
     self.playerItems = nil;
 //    self.playerLayer = nil;
@@ -236,13 +237,13 @@
     for (NSURL * url in self.videoUrls) {
 //        NSString * fileName = [self cachedFileNameForKey:url.absoluteString];
         
-        AVPlayerItem *item = [self.resourceLoaderManager playerItemWithURL:url];
-//        AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
+//        AVPlayerItem *item = [self.resourceLoaderManager playerItemWithURL:url];
+        AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
         [self.playerItems addObject:item];
-        VICacheConfiguration *configuration = [VICacheManager cacheConfigurationForURL:url];
-        if (configuration.progress >= 1.0) {
-            NSLog(@"cache completed");
-        }
+//        VICacheConfiguration *configuration = [VICacheManager cacheConfigurationForURL:url];
+//        if (configuration.progress >= 1.0) {
+//            NSLog(@"cache completed");
+//        }
 //        [[[self class] sharedDownloadManager] addDownloadTask:fileName fileURL:url.absoluteString];
     }
     
@@ -320,7 +321,7 @@
 - (void)loadNextVideo {
     if (self.currentItemIndex+1 < self.videoUrls.count) {
         [self releasePlayerItemKVOs:self.player.currentItem];
-        [self.resourceLoaderManager cancelLoaders];
+//        [self.resourceLoaderManager cancelLoaders];
         self.currentItemIndex+=1;
     } else {
         // Repeat currently playing item
