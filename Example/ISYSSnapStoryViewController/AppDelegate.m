@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+@import ISYSSnapStoryViewController;
 
 @interface AppDelegate ()
 
@@ -51,8 +52,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler {
-    self.completionHandler = completionHandler;
+- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler{
+    [TWRDownloadManager sharedManager].backgroundTransferCompletionHandler = completionHandler;
 }
 
 @end

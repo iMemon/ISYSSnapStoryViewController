@@ -35,6 +35,10 @@
                             [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/isystematic-chat.appspot.com/o/OTskm12IalYJ42tTU8LQudIzYeF3%2Fmessage_reaction_video_-Ki4CrJxC7JsHR1Cs_a7%2F1492588684179.mp4?alt=media&token=e282e01b-d099-41c4-a165-cbf78e108a7d"]
                             ];
     
+    [ISYSSnapStoryViewController addNewDownload:videoUrls[0] completion:^(BOOL completed, AVPlayerItem *playerItem) {
+        
+    }];
+    
 //    NSArray * videoUrls = @[
 //                            [NSURL URLWithString:@"http://mpvideo-test.b0.upaiyun.com/5813998fb092e5771.mp4"],
 //                            [NSURL URLWithString:@"https://mvvideo5.meitudata.com/56ea0e90d6cb2653.mp4"]

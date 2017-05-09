@@ -26,6 +26,9 @@
   "dependencies": {
     "SpinKit": [
       "~> 1.2"
+    ],
+    "TWRDownloadManager": [
+      "~> 1.1"
     ]
   }
 }

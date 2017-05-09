@@ -9,6 +9,7 @@
 @import UIKit;
 @import Foundation;
 //#import <MZDownloadManager/MZDownloadManager-Swift.h>
+#import <TWRDownloadManager/TWRDownloadManager.h>
 
 @interface ISYSSnapStoryViewController : UIViewController
 //<MZDownloadManagerDelegate>
@@ -19,7 +20,7 @@
 
 - (instancetype)initWithVideoUrls:(NSArray *)videoUrls;
 
-/// Shared Download Manager
-//+ (MZDownloadManager *)sharedDownloadManager;
+#pragma mark - Download Manager Methods
++ (AVPlayerItem *)addNewDownload:(NSURL *)url completion:(void(^)(BOOL completed, AVPlayerItem * playerItem))completionBlock;
 
 @end

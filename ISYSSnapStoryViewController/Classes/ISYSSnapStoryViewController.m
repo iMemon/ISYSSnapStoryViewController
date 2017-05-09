@@ -10,10 +10,11 @@
 #import "ISYSSnapStoryViewController.h"
 #import "VIMediaCache.h"
 #import <SpinKit/RTSpinKitView.h>
-//#import <CommonCrypto/CommonDigest.h>
+#import <CommonCrypto/CommonDigest.h>
 #import <ISYSSnapStoryViewController/ISYSSnapStoryViewController-Swift.h>
 
 #import "ISYSPlayerView.h"
+#define kNotificationDownloadCompleted @"kNotificationDownloadCompleted"
 
 //static MZDownloadManager *sharedDownloadManager;
 
@@ -42,6 +43,7 @@
 
 /// Array of AVPlayerItem
 @property (nonatomic, strong) NSMutableArray * playerItems;
+@property (nonatomic, copy, nullable) void (^firstDownloadCompletion)(BOOL completed, AVPlayerItem *playerItem);
 
 /// Currently playing AVPlayerItem
 @property (nonatomic, assign) NSInteger currentItemIndex;
@@ -86,10 +88,12 @@
 }
 -(void)setIsLoading:(BOOL)isLoading{
     _isLoading = isLoading;
+    __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.spinner setHidden:!isLoading];
+        [weakSelf.spinner setHidden:!isLoading];
+        (isLoading) ? [weakSelf.player pause] : [weakSelf.player play];
         if (isLoading) {
-            [self updateProgress:0.0 animated:NO];
+            [weakSelf updateProgress:0.0 animated:NO];
         }
     });
 }
@@ -108,12 +112,12 @@
     }
     return _playerItems;
 }
-- (AVPlayerItem *)currentItem {
-    return [self playerItemAtIndex:self.currentItemIndex];;
-}
+//- (AVPlayerItem *)currentItem {
+//    return [self playerItemAtIndex:self.currentItemIndex];;
+//}
 -(float)currentProgress {
-    double currentTime = CMTimeGetSeconds(self.currentItem.currentTime);
-    double total = CMTimeGetSeconds(self.currentItem.duration);
+    double currentTime = CMTimeGetSeconds(self.player.currentItem.currentTime);
+    double total = CMTimeGetSeconds(self.player.currentItem.duration);
     double progress = currentTime/total;
     return progress;
 }
@@ -161,10 +165,6 @@
 - (instancetype)initWithVideoUrls:(NSArray *)videoUrls {
     self = [super init];
     if (self) {
-//        NSString * sessionId = @"com.iSystematic.ReactionApp.MZDownloadManager.BackgroundSession";
-//        sharedDownloadManager = [[MZDownloadManager alloc] initWithSession:sessionId delegate:self completion:^{
-//            NSLog(@"");
-//        }];
         self.videoUrls = videoUrls;
     }
     return self;
@@ -187,6 +187,16 @@
     self.playerView.layer.frame = self.view.layer.bounds;
     self.timerView.frame = CGRectMake(self.view.layer.bounds.size.width-40.0, 20.0, 20.0, 20.0);
     self.spinner.center = self.view.center;
+    
+    __weak typeof(self) weakSelf = self;
+    [[NSNotificationCenter defaultCenter] addObserverForName:kNotificationDownloadCompleted object:[TWRDownloadManager sharedManager] queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        NSLog(@"download completed");
+        if (!weakSelf.player) {
+            [weakSelf.playerItems replaceObjectAtIndex:0 withObject:note.userInfo];
+            [weakSelf createPlayer];
+            [weakSelf playCurrentVideo];
+        }
+    }];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -204,14 +214,12 @@
 -(void) dealloc{
     NSLog(@"dealloc -- %@",self);
     
-    [self releasePlayerItemKVOs:self.player.currentItem];
-    
 //    [self.playerLayer removeFromSuperlayer];
     
     [self.player removeTimeObserver:self.playerTimeObserver];
     self.playerTimeObserver = nil;
     self.player = nil;
-    [self releasePlayerItemKVOs:self.player.currentItem];
+//    [self releasePlayerItemKVOs:self.player.currentItem];
     [self.playerItems removeAllObjects];
     self.playerItems = nil;
 //    self.playerLayer = nil;
@@ -234,20 +242,17 @@
 #pragma mark - Private Function - Create
 - (void)createPlayerItems {
     // Create playerItems
-    for (NSURL * url in self.videoUrls) {
-//        NSString * fileName = [self cachedFileNameForKey:url.absoluteString];
-        
-//        AVPlayerItem *item = [self.resourceLoaderManager playerItemWithURL:url];
-        AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
+    __weak typeof(self) weakSelf = self;
+    for (int index=0; index<_videoUrls.count; index++) {
+        AVPlayerItem * item = [NSNull null];
+        if (index==0) {
+            item = [[self class] addNewDownload:_videoUrls[index] completion:self.firstDownloadCompletion];
+        } else {
+            item = [[self class] localDownloadedVideoFromUrl:_videoUrls[index]];
+        }
         [self.playerItems addObject:item];
-//        VICacheConfiguration *configuration = [VICacheManager cacheConfigurationForURL:url];
-//        if (configuration.progress >= 1.0) {
-//            NSLog(@"cache completed");
-//        }
-//        [[[self class] sharedDownloadManager] addDownloadTask:fileName fileURL:url.absoluteString];
     }
     
-    __weak __typeof(self) weakSelf = self;
     if (self.videoUrls.count > 0) {
         // Listen for PlayerItem End notification
         [NSNotificationCenter.defaultCenter addObserverForName:AVPlayerItemDidPlayToEndTimeNotification
@@ -271,7 +276,14 @@
     __weak typeof(self) weakSelf = self;
     if (self.videoUrls.count > 0) {
         // Create player
-        self.player = [AVPlayer playerWithPlayerItem:self.playerItems[self.currentItemIndex]];
+        AVPlayerItem * playerItem = self.playerItems[self.currentItemIndex];
+        // If 1st item is not downloaded, Show Loading And wait for download to complete
+        if ([playerItem isEqual:[NSNull null]]) {
+            self.isLoading = YES;
+            return;
+        }
+        self.isLoading = NO;
+        self.player = [AVPlayer playerWithPlayerItem:playerItem];
         if ([self.player respondsToSelector:@selector(setAutomaticallyWaitsToMinimizeStalling:)]) {
             self.player.automaticallyWaitsToMinimizeStalling = YES;
         }
@@ -305,22 +317,44 @@
 }
 #pragma mark - Private Fuctions - Play
 - (void)playCurrentVideo {
+    __weak typeof(self) weakSelf = self;
     if (self.videoUrls.count > 0) {
         AVPlayerItem * newItemToPlay = [self playerItemAtIndex:self.currentItemIndex];
-        
-        [self registerPlayerItemKVOs:newItemToPlay];
-        
-        [self.player replaceCurrentItemWithPlayerItem:newItemToPlay];
-        [self.player.currentItem seekToTime:kCMTimeZero];
-        if (self.player.currentItem.status != AVPlayerStatusReadyToPlay) {
+        // If the item is not downloaed yet due to poor internet then show loading
+        if ([newItemToPlay isEqual:[NSNull null]]) {
             self.isLoading = YES;
+            // Download Current Video and Show Loading
+            AVPlayerItem * localItem = [[self class] addNewDownload:_videoUrls[self.currentItemIndex] completion:^(BOOL completed, AVPlayerItem *playerItem) {
+                if (weakSelf) {
+                    [weakSelf.playerItems replaceObjectAtIndex:weakSelf.currentItemIndex withObject:playerItem];
+                    [weakSelf playCurrentVideo];
+                }
+            }];
+            if (![localItem isEqual:[NSNull null]]) {
+                [self.playerItems replaceObjectAtIndex:self.currentItemIndex withObject:localItem];
+                [self playCurrentVideo];
+            }
+            return;
         }
-        [self.player play];
+        // else play current video and download next video
+        else {
+            self.isLoading = NO;
+            //        [self registerPlayerItemKVOs:newItemToPlay];
+            [self.player replaceCurrentItemWithPlayerItem:newItemToPlay];
+            [self.player.currentItem seekToTime:kCMTimeZero];
+            [self.player play];
+            NSInteger nextIndex = self.currentItemIndex+1;
+            if (nextIndex<self.videoUrls.count) {
+                [[self class] addNewDownload:_videoUrls[nextIndex] completion:^(BOOL completed, AVPlayerItem *playerItem) {
+                    [weakSelf.playerItems replaceObjectAtIndex:nextIndex withObject:playerItem];
+                }];
+            }
+        }
     }
 }
 - (void)loadNextVideo {
     if (self.currentItemIndex+1 < self.videoUrls.count) {
-        [self releasePlayerItemKVOs:self.player.currentItem];
+//        [self releasePlayerItemKVOs:self.player.currentItem];
 //        [self.resourceLoaderManager cancelLoaders];
         self.currentItemIndex+=1;
     } else {
@@ -331,7 +365,7 @@
     if (self.currentItemIndex-1 < 0) {
         // Repeat currently playing item
     } else {
-        [self releasePlayerItemKVOs:self.player.currentItem];
+//        [self releasePlayerItemKVOs:self.player.currentItem];
 //        [self.resourceLoaderManager cancelLoaders];
         self.currentItemIndex-=1;
     }
@@ -365,16 +399,16 @@
 //                    options:options
 //                    context:nil];
 //    
-    [playerItem addObserver:self
-                 forKeyPath:@"status"
-                    options:options
-                    context:nil];
+//    [playerItem addObserver:self
+//                 forKeyPath:@"status"
+//                    options:options
+//                    context:nil];
 }
 - (void)releasePlayerItemKVOs:(AVPlayerItem *)playerItem {
 //    [playerItem removeObserver:self forKeyPath:@"playbackBufferEmpty"];
 //    [playerItem removeObserver:self forKeyPath:@"playbackLikelyToKeepUp"];
 //    [playerItem removeObserver:self forKeyPath:@"playbackBufferFull"];
-    [playerItem removeObserver:self forKeyPath:@"status"];
+//    [playerItem removeObserver:self forKeyPath:@"status"];
 //    [playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
 //    [playerItem removeObserver:self forKeyPath:@"currentTime"];
 }
@@ -468,25 +502,25 @@
 //- (NSString *)downloadFolderPath {
 //    return [[MZUtility baseFilePath] stringByAppendingPathComponent:@"Videos"];
 //}
-//- (NSString *)filePathWithURL:(NSString *)urlString {
+//+ (NSString *)filePathWithURL:(NSString *)urlString {
 //    NSString * downloadFolderPath = [self downloadFolderPath];
 //    NSString * fileName = [self cachedFileNameForKey:[urlString componentsSeparatedByString:@"?"][0]];
 //    NSString * filePath = [downloadFolderPath stringByAppendingPathComponent:fileName];
 //    return filePath;
 //}
-//- (nullable NSString *)cachedFileNameForKey:(nullable NSString *)key {
-//    const char *str = key.UTF8String;
-//    if (str == NULL) {
-//        str = "";
-//    }
-//    unsigned char r[CC_MD5_DIGEST_LENGTH];
-//    CC_MD5(str, (CC_LONG)strlen(str), r);
-//    NSString *filename = [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%@",
-//                          r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], r[9], r[10],
-//                          r[11], r[12], r[13], r[14], r[15], [key.pathExtension isEqualToString:@""] ? @"" : [NSString stringWithFormat:@".%@", key.pathExtension]];
-//    
-//    return filename;
-//}
++ (nullable NSString *)cachedFileNameForKey:(nullable NSString *)key {
+    const char *str = key.UTF8String;
+    if (str == NULL) {
+        str = "";
+    }
+    unsigned char r[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(str, (CC_LONG)strlen(str), r);
+    NSString *filename = [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%@",
+                          r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], r[9], r[10],
+                          r[11], r[12], r[13], r[14], r[15], [key.pathExtension isEqualToString:@""] ? @"" : [NSString stringWithFormat:@".%@", key.pathExtension]];
+    
+    return filename;
+}
 ////Oppotunity to handle destination does not exists error
 ////This delegate will be called on the session queue so handle it appropriately
 //- (void)downloadRequestDestinationDoestNotExists:(MZDownloadModel *)downloadModel index:(NSInteger)index location:(NSURL *)location {
@@ -511,4 +545,50 @@
 //        }
 //    }
 //}
+
+
+#pragma mark - Download Manager Methods
++ (AVPlayerItem *)localDownloadedVideoFromUrl:(NSURL *)url {
+    NSString * urlString = url.absoluteString;
+    NSString * fileName = [self cachedFileNameForKey:[urlString componentsSeparatedByString:@"?"][0]];
+    TWRDownloadManager * manager = [TWRDownloadManager sharedManager];
+    if ([manager fileExistsWithName:fileName]) {
+        AVPlayerItem * item = [AVPlayerItem playerItemWithURL:[NSURL fileURLWithPath:[manager localPathForFile:fileName]]];
+        return item;
+    }
+    return [NSNull null];
+}
++ (AVPlayerItem *)addNewDownload:(NSURL *)url completion:(void(^)(BOOL completed, AVPlayerItem * playerItem))completion {
+    NSString * urlString = url.absoluteString;
+    NSString * fileName = [self cachedFileNameForKey:[urlString componentsSeparatedByString:@"?"][0]];
+    TWRDownloadManager * manager = [TWRDownloadManager sharedManager];
+    
+    void (^progressBlock)(CGFloat progress) = ^void(CGFloat progress) {
+        NSLog(@"progress: %f",progress);
+    };
+    
+    if ([manager fileExistsWithName:fileName]) {
+        NSLog(@"File already exists!");
+        AVPlayerItem * item = [AVPlayerItem playerItemWithURL:[NSURL fileURLWithPath:[manager localPathForFile:fileName]]];
+        return item;
+    } else if(![manager isFileDownloadingForUrl:urlString withProgressBlock:progressBlock completionBlock:^(BOOL completed) {
+        NSURL * newUrl = (completed)?[NSURL fileURLWithPath:[manager localPathForFile:fileName]] : nil;
+        NSLog(@"completed already");
+        if(completed) {
+            completion(completed, [AVPlayerItem playerItemWithURL:newUrl]);
+            [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationDownloadCompleted object:manager userInfo:[AVPlayerItem playerItemWithURL:newUrl]];
+        }
+    }]) {
+        // Dowload file
+        [[TWRDownloadManager sharedManager] downloadFileForURL:urlString withName:fileName inDirectoryNamed:nil progressBlock:progressBlock completionBlock:^(BOOL completed) {
+            NSURL * newUrl = (completed)?[NSURL fileURLWithPath:[manager localPathForFile:fileName]] : nil;
+            NSLog(@"completed");
+            if(completed) {
+                completion(completed, [AVPlayerItem playerItemWithURL:newUrl]);
+                [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationDownloadCompleted object:manager userInfo:[AVPlayerItem playerItemWithURL:newUrl]];
+            }
+        } enableBackgroundMode:YES];
+    }
+    return [NSNull null];
+}
 @end

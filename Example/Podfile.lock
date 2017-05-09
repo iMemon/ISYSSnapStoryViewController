@@ -1,7 +1,9 @@
 PODS:
   - ISYSSnapStoryViewController (0.1.1):
     - SpinKit (~> 1.2)
+    - TWRDownloadManager (~> 1.1)
   - SpinKit (1.2.0)
+  - TWRDownloadManager (1.1.1)
 
 DEPENDENCIES:
   - ISYSSnapStoryViewController (from `../`)
@@ -11,8 +13,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ISYSSnapStoryViewController: 6c3ecd12aef15596285fea0892b3adbe0d5e911e
+  ISYSSnapStoryViewController: 8cd2233b2f8ca211f7e2f99ded9d12d8184a84b5
   SpinKit: 65906a8b534a4e14cbfd3f8b0b6c329131faef4a
+  TWRDownloadManager: 34193d7d1ab6e6b4243d74fa4f686cc2ed5ef40f
 
 PODFILE CHECKSUM: 4830a2f82d14a4732649ebcde50ec2bbc46a0de9
 

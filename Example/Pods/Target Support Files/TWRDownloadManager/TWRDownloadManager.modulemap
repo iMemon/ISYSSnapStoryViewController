@@ -1,0 +1,6 @@
+framework module TWRDownloadManager {
+  umbrella header "TWRDownloadManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
