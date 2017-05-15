@@ -8,22 +8,16 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ISYSSnapStoryViewController'
-  s.version          = '0.1.1'
-  s.summary = 'A subclass on UILabel that provides a blink.'
-  s.description= 'This CocoaPod provides the ability to use a UILabel that may be started and stopped blinking.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.version          = '0.2'
+  s.summary = 'Objective-C: Snapchat inspired Story player with video caching, next, back etc.'
+  s.description= 'Snapchat inspired Story player with video caching, next, back etc.'
 
   s.homepage         = 'https://github.com/iMemon/ISYSSnapStoryViewController'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'iMemon' => 'ayazahmed313@gmail.com' }
   s.source           = { :git => 'https://github.com/iMemon/ISYSSnapStoryViewController.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/ayazahmed313'
+  s.social_media_url = 'https://twitter.com/ayazahmed313'
 
   s.ios.deployment_target = '9.0'
 
@@ -34,8 +28,7 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit', 'Foundation'
+  s.frameworks = 'UIKit', 'Foundation', 'AVFoundation'
   s.dependency "SpinKit", "~> 1.2"
-  # s.dependency "MZDownloadManager", "<= 3.2"
   s.dependency 'TWRDownloadManager', '~> 1.1'
 end
