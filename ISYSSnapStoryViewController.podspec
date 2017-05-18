@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ISYSSnapStoryViewController'
   s.version          = '0.2'
-  s.summary = 'Objective-C: Snapchat inspired Story player with video caching, next, back etc.'
+  s.summary = 'Snapchat inspired Story player with video caching, next, back etc.'
   s.description= 'Snapchat inspired Story player with video caching, next, back etc.'
 
   s.homepage         = 'https://github.com/iMemon/ISYSSnapStoryViewController'

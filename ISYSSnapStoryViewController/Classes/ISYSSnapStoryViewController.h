@@ -18,7 +18,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil NS_UNAVAILABLE;
 
-- (instancetype)initWithVideoUrls:(NSArray *)videoUrls;
+- (_Nonnull instancetype)initWithVideoUrls:(NSArray *)videoUrls;
 
 #pragma mark - Download Manager Methods
 + (AVPlayerItem *)addNewDownload:(NSURL *)url completion:(void(^)(BOOL completed, AVPlayerItem * playerItem))completionBlock;
